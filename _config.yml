@@ -1,0 +1,18 @@
+title: "Period Doubling and a Route to Chaos"
+description: "Exploring nonlinear dynamics, period doubling, and chaos through simulation in UDK and Octave."
+url: "https://oospakooysa.github.io"
+baseurl: "/period-doubling-chaos"
+
+theme: minima
+
+author:
+  name: Your Name
+  email: your@email.com
+
+markdown: kramdown
+highlighter: rouge
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
