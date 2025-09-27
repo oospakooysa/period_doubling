@@ -1,11 +1,11 @@
 ---
-layout: post
+layout: default
 title: "Period Doubling and a Route to Chaos"
 date: 2025-09-26
 tags: [chaos, nonlinear dynamics, simulation, octave, unreal-engine]
 ---
 
-![Hero Image: Bifurcation Diagram](images/bifurcation.png)
+![Hero Image: Bifurcation Diagram]({{ site.baseurl }}/images/bifurcation.png)
 
 > Exploring nonlinear oscillators and chaos through simulation in **UDK Unreal Engine 3** and **GNU Octave**.
 
@@ -96,7 +96,7 @@ for F = 1:0.01:2
 end
 ```
 
-📷 ![Bifurcation diagram showing period doubling route to chaos](images/bifurcation.png)
+📷 ![Bifurcation diagram showing period doubling route to chaos]({{ site.baseurl }}/images/bifurcation.png)
 
 ---
 
