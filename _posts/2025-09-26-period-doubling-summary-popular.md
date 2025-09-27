@@ -20,4 +20,15 @@ Chaos isn’t random — it’s deterministic physics, made visible.
 
 ---
 
-[⬅ Back to Landing Page](../../../index.html) | [🔗 Back to Repo Root](https://github.com/oospakooysa/period_doubling)
+[⬅ Back to Landing Page]({{ site.baseurl }}/index.html) | [🔗 Back to Repo Root](https://github.com/oospakooysa/period_doubling)
+
+<!-- MathJax Support -->
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[','\\]']]
+    }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
