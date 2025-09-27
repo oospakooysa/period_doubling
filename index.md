@@ -6,8 +6,11 @@ title: "Period Doubling and a Route to Chaos"
 # Period Doubling and a Route to Chaos  
 
 <p align="center">
-  <img src="{{ site.baseurl }}/images/bifurcation.png" alt="Bifurcation Diagram" style="max-width:600px; height:auto;">
+  <img src="{{ site.baseurl }}/images/bifurcation.png"
+       alt="Bifurcation Diagram"
+       style="max-width:600px; width:100%; height:auto;" />
 </p>
+
 *Figure 1. Bifurcation diagram illustrating the transition from periodic motion to chaos.*
 
 Welcome! This project explores how simple oscillators evolve into **chaotic motion**.  
