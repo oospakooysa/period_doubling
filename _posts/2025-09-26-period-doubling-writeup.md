@@ -171,13 +171,3 @@ Chaos, once abstract, became tangible.
 
 [⬅ Back to Landing Page]({{ site.baseurl }}/index.html) | [🔗 Back to Repo Root](https://github.com/oospakooysa/period_doubling)
 
-<!-- MathJax Support -->
-<script>
-  MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']],
-      displayMath: [['$$','$$'], ['\\[','\\]']]
-    }
-  };
-</script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
