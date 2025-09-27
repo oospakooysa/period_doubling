@@ -5,7 +5,7 @@ date: 2025-09-26
 tags: [chaos, nonlinear dynamics, simulation, octave, unreal-engine]
 ---
 
-![Hero Image: Bifurcation Diagram](images/bifurcation.png)  
+![Hero Image: Bifurcation Diagram]({{ site.baseurl }}/images/bifurcation.png)  
 *Figure 1. Bifurcation diagram illustrating the transition from periodic motion to chaos.*
 
 > Exploring nonlinear oscillators and chaos through simulation in **UDK Unreal Engine 3** and **GNU Octave**.
@@ -64,7 +64,7 @@ xlabel('Time'); ylabel('Displacement');
 title('Simple Harmonic Oscillator');
 ```
 
-![Simple harmonic oscillator time series](images/chaotic_timeseries.png)  
+![Simple harmonic oscillator time series]({{ site.baseurl }}/images/chaotic_timeseries.png)  
 *Figure 2. Pure sinusoidal motion of a linear mass-spring system.*
 
 ---
@@ -91,7 +91,7 @@ With linear motion understood, I increased forcing strength. The result was **pe
 - Increasing forcing: period-2, period-4 …  
 - Eventually, a cascade into chaos.  
 
-![Bifurcation diagram](images/bifurcation.png)  
+![Bifurcation diagram]({{ site.baseurl }}/images/bifurcation.png)  
 *Figure 3. Period doubling route to chaos in a forced Duffing oscillator.*
 
 ⚠️ *Note:* This is the Feigenbaum scenario — a universal pattern across many nonlinear systems.  
@@ -112,7 +112,7 @@ simulated function Tick(float DeltaTime) {
 }
 ```
 
-![Skymaster simulation render](images/skymaster.png)  
+![Skymaster simulation render]({{ site.baseurl }}/images/skymaster.png)  
 *Figure 4. Skymaster simulation in UDK showing chaotic swing dynamics.*
 
 ---
@@ -121,7 +121,7 @@ simulated function Tick(float DeltaTime) {
 
 Not all chaos hides in pendulums. In vehicle suspension systems, nonlinear resonance leads to the **jump phenomenon**: sudden amplitude shifts with small parameter changes.  
 
-![Jump phenomenon response curve](images/jump_phenomenon.png)  
+![Jump phenomenon response curve]({{ site.baseurl }}/images/jump_phenomenon.png)  
 *Figure 5. Jump phenomenon: amplitude vs frequency response showing hysteresis.*
 
 📊 *Observation:* Hysteresis emerges — on sweeping frequency up, the system “jumps” to a higher amplitude branch; sweeping down returns differently.  
