@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Period Doubling and a Route to Chaos"
 date: 2025-09-26
 tags: [chaos, nonlinear dynamics, simulation, octave, unreal-engine]
