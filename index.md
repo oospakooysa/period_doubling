@@ -1,15 +1,13 @@
 ---
 layout: default
-title: Home
+title: "Period Doubling and a Route to Chaos"
 ---
 
-# Posts
+# Period Doubling and a Route to Chaos  
 
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-      <span style="font-size:0.9em; color:#777;">({{ post.date | date: "%B %d, %Y" }})</span>
-    </li>
-  {% endfor %}
-</ul>
+Welcome. This project explores the transition from linear oscillators to chaotic motion using both **GNU Octave** and **Unreal Engine (UDK)**.  
+
+## Choose your entry point:  
+- 📘 [Full Report](./_posts/2025-09-26-period-doubling-writeup.md)  
+- 🌍 [Popular Abstract](./_posts/2025-09-26-period-doubling-summary-popular.md)  
+- 📑 [Research Abstract](./_posts/2025-09-26-period-doubling-summary-research.md)  
