@@ -136,7 +136,7 @@ Through simulation and analysis, I demonstrated:
 
 - **Period doubling** as a universal route to chaos  
 - **Chaotic attractors** emerging from simple pendulum models  
-- **Real-world implications** (e.g. unsafe g-forces in rides)  
+- **Real-world implications** (e.g. unsafe g-forces in rides)
 
 This project bridges theory, simulation, and engineering safety, showing how mathematics of chaos plays out in physical systems.  
 
@@ -144,11 +144,11 @@ This project bridges theory, simulation, and engineering safety, showing how mat
 
 # Code and Assets  
 
-All supporting files are available in this repository:  
+All supporting files are available in this repository:
 
-- Octave scripts for solvers, sweeps, and plots  
-- UnrealScript classes for UDK simulations  
-- Level assets for the Science Park demo  
+- Octave scripts for solvers, sweeps, and plots
+- UnrealScript classes for UDK simulations
+- Level assets for the Science Park demo
 
 👉 [View the repository here](#)
 
@@ -156,9 +156,9 @@ All supporting files are available in this repository:
 
 # Appendix – Simulator Comparison  
 
-*(Optional, moved here for focus in the main article)*  
+*(Optional, moved here for focus in the main article)*
 
-- **UDK** provided immersive 3D simulations, but required custom physics.  
-- **Webots** offered easier integration with Octave but was limited to robotics-focused assets.  
+- **UDK** provided immersive 3D simulations, but required custom physics.
+- **Webots** offered easier integration with Octave but was limited to robotics-focused assets.
 
-📷 ![Side-by-side comparison of UDK vs Webots](images/simulator_comparison.png)  
+📷 ![Side-by-side comparison of UDK vs Webots](images/simulator_comparison.png)
