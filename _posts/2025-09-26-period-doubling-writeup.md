@@ -169,4 +169,4 @@ Chaos, once abstract, became tangible.
 
 ---
 
-[⬅ Back to Landing Page](../../../index.html) | [🔗 Back to Repo Root](https://github.com/oospakooysa/period_doubling)
+[⬅ Back to Landing Page]({{ site.baseurl }}/index.html) | [🔗 Back to Repo Root](https://github.com/oospakooysa/period_doubling)
