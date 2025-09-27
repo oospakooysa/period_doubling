@@ -3,7 +3,7 @@ description: "Exploring nonlinear dynamics, period doubling, and chaos through s
 url: "https://oospakooysa.github.io"
 baseurl: "/period_doubling"
 
-remote_theme: jekyll/minima
+remote_theme: "jekyll/minima"
 
 plugins:
   - jekyll-remote-theme
