@@ -62,3 +62,111 @@ x = cos(omega*t);   % A=1, phi=0
 plot(t, x);
 xlabel('Time'); ylabel('Displacement');
 title('Simple Harmonic Oscillator');
+```
+
+![Simple harmonic oscillator time series](images/chaotic_timeseries.png)  
+*Figure 2. Pure sinusoidal motion of a linear mass-spring system.*
+
+---
+
+## 2.2 Duffing Oscillator  
+
+Adding cubic stiffness introduces nonlinearity:  
+
+\[
+m \ddot{x} + c \dot{x} + kx + \beta x^3 = F \cos(\omega t)
+\]
+
+Here, \(\beta\) controls nonlinearity, \(c\) is damping, and \(F\cos(\omega t)\) is periodic forcing.  
+
+💡 *Insight:* Even small nonlinearities reshape phase portraits and trigger bifurcations.  
+
+---
+
+# 3. Period Doubling and the Route to Chaos  
+
+With linear motion understood, I increased forcing strength. The result was **period doubling**:  
+
+- At low forcing: period-1 oscillations.  
+- Increasing forcing: period-2, period-4 …  
+- Eventually, a cascade into chaos.  
+
+![Bifurcation diagram](images/bifurcation.png)  
+*Figure 3. Period doubling route to chaos in a forced Duffing oscillator.*
+
+⚠️ *Note:* This is the Feigenbaum scenario — a universal pattern across many nonlinear systems.  
+
+---
+
+# 4. Chaos in the Skymaster Ride  
+
+Equations are powerful, but nothing beats experiencing chaos. Enter the **Skymaster**, a pendulum-style fairground ride.  
+
+Inside UDK, I scripted the Skymaster as a forced nonlinear pendulum. As the driving torque was tuned, stable swings gave way to irregular, chaotic motion.  
+
+```unrealscript
+// Simplified UnrealScript fragment
+simulated function Tick(float DeltaTime) {
+    AngularVel += (Torque/Mass - Damping*AngularVel) * DeltaTime;
+    Angle += AngularVel * DeltaTime;
+}
+```
+
+![Skymaster simulation render](images/skymaster.png)  
+*Figure 4. Skymaster simulation in UDK showing chaotic swing dynamics.*
+
+---
+
+# 5. The Jump Phenomenon  
+
+Not all chaos hides in pendulums. In vehicle suspension systems, nonlinear resonance leads to the **jump phenomenon**: sudden amplitude shifts with small parameter changes.  
+
+![Jump phenomenon response curve](images/jump_phenomenon.png)  
+*Figure 5. Jump phenomenon: amplitude vs frequency response showing hysteresis.*
+
+📊 *Observation:* Hysteresis emerges — on sweeping frequency up, the system “jumps” to a higher amplitude branch; sweeping down returns differently.  
+
+---
+
+# 6. Comparing Simulation Frameworks  
+
+To ensure validity, I compared Octave simulations with Unreal Engine models. Results matched qualitatively, though numerical artifacts sometimes shifted bifurcation thresholds.  
+
+💡 *Lesson:* Different solvers emphasize different aspects — Octave excels in clarity, Unreal in visualization.  
+
+---
+
+# 7. Mathematical Insights  
+
+Period doubling follows Feigenbaum’s constant \(\delta \approx 4.669\):  
+
+\[
+\delta = \lim_{n \to \infty} \frac{f_{n} - f_{n-1}}{f_{n+1} - f_{n}}
+\]
+
+This universality links pendulums, circuits, fluids, and more.  
+
+---
+
+# 8. Broader Connections  
+
+Chaos is not randomness — it is **deterministic unpredictability**.  
+Applications span:  
+- Climate modeling  
+- Secure communications  
+- Biological rhythms  
+
+---
+
+# 9. Conclusion  
+
+This project traced the path from linear oscillators to chaos:  
+- SHO → Duffing → Period Doubling → Chaos  
+- Realized in both Octave and Unreal Engine  
+- Visualized in rides and resonances  
+
+Chaos, once abstract, became tangible.  
+
+---
+
+[⬅ Back to Landing Page](../../../index.html) | [🔗 Back to Repo Root](https://github.com/oospakooysa/period_doubling)
