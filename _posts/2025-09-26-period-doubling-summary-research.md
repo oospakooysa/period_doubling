@@ -1,3 +1,4 @@
+# FILE: _posts/2025-09-26-period-doubling-summary-research.md
 ---
 layout: default
 title: "Period Doubling and Chaos (Research Abstract)"
