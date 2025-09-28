@@ -30,7 +30,7 @@ This project set out to explore that transformation: from **linear oscillators**
 
 The goal was not to rely on black-box solvers, but to simulate each system inside **GNU Octave** and the **Unreal Engine (UDK)**, making the physics visible.
 
-Why does this matter?  
+Why does this matter?
 - **Engineering:** Nonlinearities appear in suspension systems, aircraft, and bridges. Predicting when stable oscillations destabilize is essential for safety.  
 - **Everyday life:** Amusement rides like the **Skymaster** or the **Apocalypse** are real pendulums whose motion borders on chaos under forcing.  
 - **Science:** Period doubling is not just a curiosity; it is the universal route to chaos observed in fluids, lasers, circuits, and biology.  
@@ -41,6 +41,16 @@ To study these phenomena, I used two complementary tools:
 
 By running these models side by side, I could both **demonstrate the mathematics** of chaos and **ground them in tangible scenarios**. What follows is a journey through oscillators, bifurcations, and rides — from the serene to the unpredictable.  
 
+
+---
+
+## Case Study: Fairground Ride Collapse, Saudi Arabia (July 2025)
+
+In late July 2025, a rotating carousel ride in **Taif, Saudi Arabia** — known locally as *360 Degrees* — collapsed while in motion, injuring over twenty people, several critically. ([Source](https://www.newarab.com/news/over-20-inured-fairground-ride-collapses-saudi-arabia?utm_source=chatgpt.com))  
+
+Eyewitness accounts described structural elements snapping under load, with riders thrown from the platform. Although full technical details have not yet emerged, this incident highlights the dangers inherent in mechanical rides subjected to dynamic forcing, potentially beyond their design limits.  
+
+This serves as a tragic, real-world analogue to the nonlinear and chaotic behaviors studied in this report. In our models, we explore how parameters like forcing amplitude, damping, and nonlinear stiffness can push a system from stable oscillation toward bifurcation, jump phenomena, and chaos. The Saudi case reminds us: when operating conditions exceed those safe thresholds, the consequences can be severe.  
 
 ---
 
