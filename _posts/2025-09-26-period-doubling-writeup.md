@@ -10,43 +10,44 @@ tags: [chaos, nonlinear dynamics, simulation, octave, unreal-engine]
 
 > Exploring nonlinear oscillators and chaos through simulation in **UDK Unreal Engine 3** and **GNU Octave**.
 
-# Contents
-1. [Introduction](#1-introduction)  
-2. [From Linear to Nonlinear Oscillators](#2-from-linear-to-nonlinear-oscillators)  
-3. [Period Doubling and the Route to Chaos](#3-period-doubling-and-the-route-to-chaos)  
-4. [Chaos in the Skymaster Ride](#4-chaos-in-the-skymaster-ride)  
-5. [The Jump Phenomenon](#5-the-jump-phenomenon)  
-6. [Comparing Simulation Frameworks](#6-comparing-simulation-frameworks)  
-7. [Mathematical Insights](#7-mathematical-insights)  
-8. [Broader Connections](#8-broader-connections)  
-9. [Conclusion](#9-conclusion)  
+## Report Outline  
+
+1. [Introduction](#1-introduction)
+2. [From Linear to Nonlinear Oscillators](#2-from-linear-to-nonlinear-oscillators)
+3. [Chaos and Period Doubling](#3-chaos-and-period-doubling)
+4. [The Skymaster Ride](#4-the-skymaster-ride)
+5. [The Apocalypse Ride](#5-the-apocalypse-ride)
+6. [The Jump Phenomenon](#6-the-jump-phenomenon)
+7. [Comparison of Simulators](#7-comparison-of-simulators)
+8. [Discussion](#8-discussion)
+9. [Conclusion](#9-conclusion)
 
 ---
 
-# 1. Introduction  
+# 1. Introduction
 
 Chaos emerges when simple deterministic rules generate unpredictable, intricate motion. This project follows that path: beginning with linear oscillators, layering in nonlinearity, forcing, and damping, and arriving at the strange world of **period doubling** and the **route to chaos**.  
-This project set out to explore that transformation: from **linear oscillators** with predictable sinusoidal motion, to **nonlinear systems** exhibiting bifurcations, period doubling, and finally **chaos**.  
+This project set out to explore that transformation: from **linear oscillators** with predictable sinusoidal motion, to **nonlinear systems** exhibiting bifurcations, period doubling, and finally **chaos**.
 
 The goal was not to rely on black-box solvers, but to simulate each system inside **GNU Octave** and the **Unreal Engine (UDK)**, making the physics visible.
 
 Why does this matter?
-- **Engineering:** Nonlinearities appear in suspension systems, aircraft, and bridges. Predicting when stable oscillations destabilize is essential for safety.  
-- **Everyday life:** Amusement rides like the **Skymaster** or the **Apocalypse** are real pendulums whose motion borders on chaos under forcing.  
-- **Science:** Period doubling is not just a curiosity; it is the universal route to chaos observed in fluids, lasers, circuits, and biology.  
+- **Engineering:** Nonlinearities appear in suspension systems, aircraft, and bridges. Predicting when stable oscillations destabilize is essential for safety.
+- **Everyday life:** Amusement rides like the **Skymaster** or the **Apocalypse** are real pendulums whose motion borders on chaos under forcing. 
+- **Science:** Period doubling is not just a curiosity; it is the universal route to chaos observed in fluids, lasers, circuits, and biology.
 
-To study these phenomena, I used two complementary tools:  
-- **GNU Octave** for controlled, mathematical simulations where every equation is explicit.  
-- **UDK Unreal Engine 3** for immersive, real-time environments that make chaos *visible* and relatable.  
+To study these phenomena, I used two complementary tools:
+- **GNU Octave** for controlled, mathematical simulations where every equation is explicit.
+- **UDK Unreal Engine 3** for immersive, real-time environments that make chaos *visible* and relatable.
 
-By running these models side by side, I could both **demonstrate the mathematics** of chaos and **ground them in tangible scenarios**. What follows is a journey through oscillators, bifurcations, and rides — from the serene to the unpredictable.  
+By running these models side by side, I could both **demonstrate the mathematics** of chaos and **ground them in tangible scenarios**. What follows is a journey through oscillators, bifurcations, and rides — from the serene to the unpredictable.
 
 
 ---
 
 ## Case Study: Fairground Ride Collapse, Saudi Arabia (July 2025)
 
-In late July 2025, a rotating carousel ride in **Taif, Saudi Arabia** — known locally as *360 Degrees* — collapsed while in motion, injuring over twenty people, several critically. ([Source](https://www.newarab.com/news/over-20-inured-fairground-ride-collapses-saudi-arabia?utm_source=chatgpt.com))  
+In late July 2025, a rotating carousel ride in **Taif, Saudi Arabia** — known locally as *360 Degrees* — collapsed while in motion, injuring over twenty people, several critically. ([Source](https://www.cnn.com/2025/07/31/middleeast/saudi-arabia-fairground-ride-intl))  
 
 Eyewitness accounts described structural elements snapping under load, with riders thrown from the platform. Although full technical details have not yet emerged, this incident highlights the dangers inherent in mechanical rides subjected to dynamic forcing, potentially beyond their design limits.  
 
@@ -54,15 +55,15 @@ This serves as a tragic, real-world analogue to the nonlinear and chaotic behavi
 
 ---
 
-# 2. From Linear to Nonlinear Oscillators  
+# 2. From Linear to Nonlinear Oscillators
 
-The study of chaos begins with the most familiar building block in physics: the **oscillator**. By gradually adding damping, forcing, and nonlinearities, we can see how simple, predictable motion evolves into complex and eventually chaotic behavior.  
+The study of chaos begins with the most familiar building block in physics: the **oscillator**. By gradually adding damping, forcing, and nonlinearities, we can see how simple, predictable motion evolves into complex and eventually chaotic behavior.
 
 
-Before diving into chaos, I began with familiar oscillators:  
-- **Linear systems** behaved predictably, with smooth sinusoidal motion.  
-- **Nonlinear stiffness** introduced subtle distortions.  
-- Adding **forcing terms** created rich dynamics, leading to bifurcations.  
+Before diving into chaos, I began with familiar oscillators:
+- **Linear systems** behaved predictably, with smooth sinusoidal motion.
+- **Nonlinear stiffness** introduced subtle distortions.
+- Adding **forcing terms** created rich dynamics, leading to bifurcations.
 
 ## 2.1 Simple Harmonic Oscillator (SHO)
 
@@ -107,7 +108,7 @@ title('Simple Harmonic Oscillator');
 
 In reality, no swing or suspension oscillates forever. Energy dissipates through friction or air resistance. Adding damping:
 
-$m \ddot{x} + c \dot{x} + kx = 0$  
+$m \ddot{x} + c \dot{x} + kx = 0$
 
 produces an exponentially decaying response.
 
@@ -142,9 +143,9 @@ Here,
 - $c$ is damping,  
 - $F \cos(\omega t)$ is periodic forcing.  
 
-Nonlinear terms distort the sinusoidal response:  
-- Small nonlinearities → subtle frequency shifts.  
-- Larger nonlinearities → multiple stable states, jumps, and chaos.  
+Nonlinear terms distort the sinusoidal response:
+- Small nonlinearities → subtle frequency shifts.
+- Larger nonlinearities → multiple stable states, jumps, and chaos.
 
 This is where **real rides like the Skymaster** start behaving unpredictably: a small change in forcing can suddenly send the system into a different oscillatory regime.  
 
@@ -252,7 +253,7 @@ simulated function Tick(float DeltaTime) {
 }
 ```
 
-![Skymaster simulation render]({{ site.baseurl }}/images/skymaster.png)  
+![Skymaster simulation render]({{ site.baseurl }}/images/skymaster.png)
 *Figure 4. Skymaster simulation in UDK showing chaotic swing dynamics.*
 
 
@@ -267,29 +268,29 @@ Unlike a playground swing:
 
 ---
 
-## 4.2 UDK Implementation  
+## 4.2 UDK Implementation
 
-- **`MAS14P_SkyMaster.uc`** defines the mechanics.  
-- **`SciencePark_Level_Projects2021.udk`** places it in a park environment.  
-- Motion coded manually, not left to default physics.  
-
----
-
-## 4.3 Results  
-
-- Low forcing → gentle swings.  
-- More forcing → period doubling.  
-- High forcing → chaotic swings, sensitive to start. 
+- **`MAS14P_SkyMaster.uc`** defines the mechanics.
+- **`SciencePark_Level_Projects2021.udk`** places it in a park environment.
+- Motion coded manually, not left to default physics.
 
 ---
 
-# 5. The Apocalypse Ride  
+## 4.3 Results
 
-The **Apocalypse ride**, a vertical drop-tower, resembles a **driven mass-spring-damper system**.  
+- Low forcing → gentle swings.
+- More forcing → period doubling.
+- High forcing → chaotic swings, sensitive to start.
 
-- **Motors and brakes** add forcing/damping.  
-- **Structural stiffness** is nonlinear.  
-- **Energy loss** is uneven.  
+---
+
+# 5. The Apocalypse Ride
+
+The **Apocalypse ride**, a vertical drop-tower, resembles a **driven mass-spring-damper system**.
+
+- **Motors and brakes** add forcing/damping.
+- **Structural stiffness** is nonlinear.
+- **Energy loss** is uneven.
 
 ---
 
@@ -319,10 +320,10 @@ The **jump phenomenon** occurs when oscillations abruptly change amplitude as pa
 jump
 ```
 
-![Jump phenomenon response curve]({{ site.baseurl }}/images/jump_phenomenon.png)  
+![Jump phenomenon response curve]({{ site.baseurl }}/images/jump_phenomenon.png)
 *Figure 5. Jump phenomenon: amplitude vs frequency response showing hysteresis.*
 
-📊 *Observation:* Hysteresis emerges — on sweeping frequency up, the system “jumps” to a higher amplitude branch; sweeping down returns differently.  
+📊 *Observation:* Hysteresis emerges — on sweeping frequency up, the system “jumps” to a higher amplitude branch; sweeping down returns differently.
 
 ---
 
@@ -342,7 +343,7 @@ $$
 \delta = \lim_{n \to \infty} \frac{f_{n} - f_{n-1}}{f_{n+1} - f_{n}}
 $$
 
-This universality links pendulums, circuits, fluids, and more.  
+This universality links pendulums, circuits, fluids, and more.
 
 ---
 
@@ -366,9 +367,8 @@ This project traced the path from linear oscillators to chaos:
 - Visualized in rides and resonances
 - Jump phenomenon shows abrupt transitions
 
-Chaos is not just theory: it is motion we can plot, simulate, and ride.  
+Chaos is not just theory: it is motion we can plot, simulate, and ride.
 
 ---
 
 [⬅ Back to Landing Page]({{ site.baseurl }}/index.html) | [🔗 Back to Repo Root](https://github.com/oospakooysa/period_doubling)
-
