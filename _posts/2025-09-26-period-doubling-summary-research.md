@@ -1,4 +1,3 @@
-# FILE: _posts/2025-09-26-period-doubling-summary-research.md
 ---
 layout: default
 title: "Period Doubling and Chaos (Research Abstract)"
@@ -15,7 +14,8 @@ Key contributions:
 - Implementation of nonlinear pendulum dynamics (Skymaster ride) in Unreal Engine.
 - Observation of the **jump phenomenon** in forced nonlinear resonance.
 - Comparison of simulation frameworks (Octave vs UDK).
-- Connection to **Feigenbaum universality** \(\delta \approx 4.669201609\)
+- Connection to **Feigenbaum universality**
+ \(\delta \approx 4.669201609\)
 
 The results confirm classical nonlinear dynamics theory while highlighting the role of visualization in understanding chaotic motion.  
 
