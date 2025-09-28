@@ -1,4 +1,3 @@
-# FILE: README.md
 # Period Doubling and a Route to Chaos  
 
 This repository hosts a writeup and supporting materials for my project exploring nonlinear dynamics, period doubling, and chaos. Simulations were performed in **GNU Octave** and **Unreal Engine (UDK)**.  
