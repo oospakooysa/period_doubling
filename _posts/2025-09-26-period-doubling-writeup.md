@@ -161,7 +161,7 @@ solve_DDHO_Sweep
 
 ---
 
-# 3. Period Doubling and the Route to Chaos  
+# 3. Chaos and Period Doubling
 
 With the groundwork of oscillators in place, we can now move into the heart of the project: **how predictable motion breaks down into chaos**.  
 
@@ -171,17 +171,17 @@ This phenomenon is not only theoretical: it has been observed in **circuits, flu
 
 With linear motion understood, I increased forcing strength. The result was **period doubling**:
 
-- At low forcing: period-1 oscillations.  
-- Increasing forcing: period-2, period-4 …  
-- Eventually, a cascade into chaos.
+- At low forcing: period-1 oscillations
+- Increasing forcing: period-2, period-4 … 
+- Eventually, a cascade into chaos
 
 ## 3.1 From Periodic to Chaotic  
 
-Start with a driven nonlinear oscillator. At low forcing amplitudes, the response is **period-1**: one oscillation per drive cycle.  
+Start with a driven nonlinear oscillator. At low forcing amplitudes, the response is **period-1**: one oscillation per drive cycle.
 
-As the forcing increases, the system undergoes a **bifurcation**: it flips into a **period-2 orbit**, repeating only every two drive cycles.  
+As the forcing increases, the system undergoes a **bifurcation**: it flips into a **period-2 orbit**, repeating only every two drive cycles.
 
-This repeats — period-4, period-8 — until the system is no longer periodic at all. The pattern of doubling converges to a universal constant, the **Feigenbaum constant $\delta \approx 4.669$**:  
+This repeats — period-4, period-8 — until the system is no longer periodic at all. The pattern of doubling converges to a universal constant, the **Feigenbaum constant $\delta \approx 4.669$**: 
 
 $\delta = \lim_{n \to \infty} \frac{f_{n} - f_{n-1}}{f_{n+1} - f_{n}}$
 
@@ -234,7 +234,7 @@ Chaos in the time domain:
 
 ---
 
-# 4. Chaos in the Skymaster Ride  
+# 4. The Skymaster Ride
 
 Equations are powerful, but nothing beats experiencing chaos. Enter the **Skymaster**, a pendulum-style fairground ride.  
 
