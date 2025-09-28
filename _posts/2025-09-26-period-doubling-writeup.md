@@ -40,9 +40,9 @@ Before diving into chaos, I began with familiar oscillators:
 
 ## 2.1 Simple Harmonic Oscillator (SHO)  
 
-\[
+$$
 m \ddot{x} + kx = 0
-\]
+$$
 
 Solution:  
 
@@ -73,11 +73,11 @@ title('Simple Harmonic Oscillator');
 
 Adding cubic stiffness introduces nonlinearity:  
 
-\[
+$$
 m \ddot{x} + c \dot{x} + kx + \beta x^3 = F \cos(\omega t)
-\]
+$$
 
-Here, \(\beta\) controls nonlinearity, \(c\) is damping, and \(F\cos(\omega t)\) is periodic forcing.  
+Here, \(\beta\) controls nonlinearity, \(c\) is damping, and \(F \cos(\omega t)\) is periodic forcing.
 
 💡 *Insight:* Even small nonlinearities reshape phase portraits and trigger bifurcations.  
 
@@ -140,9 +140,9 @@ To ensure validity, I compared Octave simulations with Unreal Engine models. Res
 
 Period doubling follows Feigenbaum’s constant \(\delta \approx 4.669\):  
 
-\[
+$$
 \delta = \lim_{n \to \infty} \frac{f_{n} - f_{n-1}}{f_{n+1} - f_{n}}
-\]
+$$
 
 This universality links pendulums, circuits, fluids, and more.  
 
