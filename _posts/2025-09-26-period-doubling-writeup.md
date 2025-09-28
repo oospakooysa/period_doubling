@@ -5,7 +5,7 @@ date: 2025-09-26
 tags: [chaos, nonlinear dynamics, simulation, octave, unreal-engine]
 ---
 
-![Hero Image: Bifurcation Diagram]({{ site.baseurl }}/images/bifurcation.png)  
+![Hero Image: Bifurcation Diagram]({{ site.baseurl }}/images/bifurcation.png)
 *Figure 1. Bifurcation diagram illustrating the transition from periodic motion to chaos.*
 
 > Exploring nonlinear oscillators and chaos through simulation in **UDK Unreal Engine 3** and **GNU Octave**.
