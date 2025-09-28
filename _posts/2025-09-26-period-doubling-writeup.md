@@ -19,8 +19,9 @@ tags: [chaos, nonlinear dynamics, simulation, octave, unreal-engine]
 5. [The Apocalypse Ride](#5-the-apocalypse-ride)
 6. [The Jump Phenomenon](#6-the-jump-phenomenon)
 7. [Comparison of Simulators](#7-comparison-of-simulators)
-8. [Discussion](#8-discussion)
-9. [Conclusion](#9-conclusion)
+8. [Mathematical Insights](#8-mathematical-insights)
+9. [Discussion](#9-discussion)
+10. [Conclusion](#10-conclusion)
 
 ---
 
@@ -327,7 +328,7 @@ jump
 
 ---
 
-# 7. Comparing Simulation Frameworks  
+# 7. Comparison of Simulators
 
 To ensure validity, I compared Octave simulations with Unreal Engine models. Results matched qualitatively, though numerical artifacts sometimes shifted bifurcation thresholds.  
 
@@ -335,7 +336,7 @@ To ensure validity, I compared Octave simulations with Unreal Engine models. Res
 
 ---
 
-# 8. Mathematical Insights  
+# 8. Mathematical Insights
 
 Period doubling follows Feigenbaum’s constant \(\delta \approx 4.669\):  
 
@@ -359,7 +360,7 @@ Engineering-wise, ignoring nonlinearities risks instability.
 
 ---
 
-# 9. Conclusion  
+# 10. Conclusion  
 
 This project traced the path from linear oscillators to chaos:  
 - SHO → Duffing → Period Doubling → Chaos  
