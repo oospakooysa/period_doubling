@@ -9,16 +9,15 @@ title: "Period Doubling and a Route to Chaos"
   <img src="{{ site.baseurl }}/images/bifurcation.png"
        alt="Bifurcation Diagram"
        style="max-width:600px; width:100%; height:auto;" />
+  <i>Figure 1. Bifurcation diagram illustrating the transition from periodic motion to chaos.</i>
 </p>
-
-*Figure 1. Bifurcation diagram illustrating the transition from periodic motion to chaos.*
 
 Welcome! This project explores how simple oscillators evolve into **chaotic motion**.  
 Using both **GNU Octave** and **Unreal Engine (UDK)**, I recreated nonlinear systems — from mass-spring oscillators to fairground rides — to make the **period-doubling route to chaos** visible and intuitive.  
 
 ---
 
-## Choose Your Path  
+## Explore the Project  
 
 - 📘 [Full Report]({{ site.baseurl }}/2025/09/26/period-doubling-writeup.html)  
   *A complete narrative with math, simulations, and figures.*  
@@ -27,7 +26,10 @@ Using both **GNU Octave** and **Unreal Engine (UDK)**, I recreated nonlinear sys
   *An accessible overview for general readers.*  
 
 - 📑 [Research Abstract]({{ site.baseurl }}/2025/09/26/period-doubling-summary-research.html)  
-  *A concise, technical summary for a scientific audience.*  
+  *A concise, technical summary for a scientific audience.*
+
+- 💻 [Project Code](https://github.com/oospakooysa/period_doubling/tree/main/code)  
+
 
 ---
 
