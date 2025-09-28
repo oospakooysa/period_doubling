@@ -14,8 +14,8 @@ Key contributions:
 - Implementation of nonlinear pendulum dynamics (Skymaster ride) in Unreal Engine.
 - Observation of the **jump phenomenon** in forced nonlinear resonance.
 - Comparison of simulation frameworks (Octave vs UDK).
-- Connection to **Feigenbaum universality**
- \(\delta \approx 4.669201609\)
+- Connection to **Feigenbaum universality** ($\delta \approx 4.669$).
+
 
 The results confirm classical nonlinear dynamics theory while highlighting the role of visualization in understanding chaotic motion.  
 
