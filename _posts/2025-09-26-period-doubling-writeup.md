@@ -46,9 +46,10 @@ $$
 
 Solution:  
 
-\[
+$$
 x(t) = A \cos(\omega t + \phi), \quad \omega = \sqrt{\tfrac{k}{m}}
-\]
+$$
+
 
 📊 *Octave simulation:*  
 
