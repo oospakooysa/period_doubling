@@ -254,10 +254,10 @@ simulated function Tick(float DeltaTime) {
 }
 ```
 
-<div class="video-container">
-  <video autoplay loop muted playsinline>
-    <source src="/images/ride_pendulum_reverse_loop.webm" type="video/webm">
-    <source src="/images/ride_pendulum_reverse_loop.mp4" type="video/mp4">
+<div style="position:relative; width:100%; max-width:800px; margin:1rem auto;">
+  <video autoplay loop muted playsinline style="width:100%; height:auto; display:block; border-radius:12px;">
+    <source src="/period_doubling/images/ride_pendulum_reverse_loop.webm" type="video/webm">
+    <source src="/period_doubling/images/ride_pendulum_reverse_loop.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 </div>
