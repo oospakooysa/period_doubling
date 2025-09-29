@@ -221,7 +221,7 @@ Plotting displacement vs. velocity reveals the shape of motion.
 - Simple oscillations → ellipses.  
 - Chaotic dynamics → strange attractors, folding like fractals.  
 
-![Chaotic phase portrait](../../images/chaotic_phase.png)  
+![Chaotic phase portrait]({{ site.baseurl }}/images/chaotic_phase.png)  
 *Figure 4. Chaotic dynamics forming a strange attractor.*  
 
 ---
@@ -230,7 +230,7 @@ Plotting displacement vs. velocity reveals the shape of motion.
 
 Chaos in the time domain:  
 
-![Chaotic time series](../../images/chaotic_timeseries.png)  
+![Chaotic time series]({{ site.baseurl }}/images/chaotic_timeseries.png)  
 *Figure 5. Chaotic time series of the Duffing oscillator.*  
 
 ---
@@ -311,9 +311,9 @@ The **Apocalypse ride**, a vertical drop-tower, resembles a **driven mass-spring
 ## 5.1 UDK Implementation  
 
 - **`MAS14_Apocalypse_FSM.uc`** models states: lift, pause, drop, rebound.  
-- Nonlinearities mean motion is not perfectly periodic.  
+- Nonlinearities mean motion is not perffectly periodic.  
 
-![Apocalypse simulation](../../images/apocalypse_render.png)  
+![Apocalypse simulation]({{ site.baseurl }}/images/apocalypse_render.png)  
 *Figure 7. UDK Apocalypse ride simulation — nonlinear tower dynamics.*  
 
 ---
