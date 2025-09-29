@@ -24,7 +24,7 @@ We’ll use real-world analogies (fairground rides, suspension systems), coding 
 Before diving into chaos, we first **verify** our tools.
 
 ### The Apocalypse Ride
-A 1D dynamic system, where a car free-falls from 54 m before braking at ~6 m.  
+A 1D dynamic system, where a car free-falls from 54 m before braking at ~6 m.
 We modelled the ride in Octave, observing the velocity and displacement over time.
 
 *Key insight:* The braking distance relates to gravitational force via:
@@ -35,7 +35,7 @@ h₁ = (mg / B) * h₂
 
 Graphs of velocity and acceleration confirm when braking occurs (~10.2s) and how deceleration peaks.
 
-![Apocalypse Ride Velocity]({{ site.baseurl }}/images/apocalypse_velocity.png)  
+![Apocalypse Ride Velocity]({{ site.baseurl }}/images/apocalypse_velocity.png)
 ![Apocalypse Ride Acceleration]({{ site.baseurl }}/images/apocalypse_accel.png)
 
 ---
@@ -93,29 +93,100 @@ Simulations show subharmonics, irregular phase planes, and eventually chaos.
 
 ## 5. Period-Doubling Bifurcations
 
-Here’s the heart of the story. Increasing drive strength leads to bifurcations:
+One of the most striking routes to chaos in nonlinear dynamics is the **period-doubling cascade**.  
+As the driving strength increases, oscillations progress from stable repetition into alternating cycles, doubling in complexity each time.  
+Eventually, this sequence leads to fully chaotic motion.
 
-- **Period 1 (γ = 1.060)** – Stable, single oscillation  
-- **Period 2 (γ = 1.078)** – Motion doubles period  
-- **Period 4 (γ = 1.081)** – Doubling again  
-- **Period 8 (γ = 1.0826)** – Doubling continues  
+---
 
-![Period 1 Time Series]({{ site.baseurl }}/images/period1a.png)
-![Period 1 Phase Plane]({{ site.baseurl }}/images/period1b.png)
-![Period 1 Spectrum]({{ site.baseurl }}/images/period1c.png)
-![Period 1 Return Map]({{ site.baseurl }}/images/period1d.png)
-![Period 2]({{ site.baseurl }}/images/period2a.png)
-![Period 2]({{ site.baseurl }}/images/period2b.png)
-![Period 2]({{ site.baseurl }}/images/period2c.png)
-![Period 2]({{ site.baseurl }}/images/period2d.png)
-![Period 4]({{ site.baseurl }}/images/period4a.png)
-![Period 4]({{ site.baseurl }}/images/period4b.png)
-![Period 4]({{ site.baseurl }}/images/period4c.png)
-![Period 4]({{ site.baseurl }}/images/period4d.png)
-![Period 8]({{ site.baseurl }}/images/period8a.png)
-![Period 8]({{ site.baseurl }}/images/period8b.png)
-![Period 8]({{ site.baseurl }}/images/period8c.png)
-![Period 8]({{ site.baseurl }}/images/period8d.png)
+### Period-1 Oscillations (γ = 1.060)
+
+At low driving strength, the system exhibits **simple periodic motion**.  
+The oscillator repeats the same path every cycle.
+
+| ![Period 1 Time Series]({{ site.baseurl }}/images/period1a.png) | ![Period 1 Phase Plane]({{ site.baseurl }}/images/period1b.png) |
+|---------------------------|---------------------------|
+| *Period-1 – time series*  | *Period-1 – phase plane*  |
+| ![Period 1 Spectrum]({{ site.baseurl }}/images/period1c.png) | ![Period 1 Return Map]({{ site.baseurl }}/images/period1d.png) |
+| *Period-1 – spectrum*     | *Period-1 – return map*   |
+
+- **Time series**: Regular oscillation with a single amplitude.  
+- **Phase plane**: A single closed loop.  
+- **Spectrum**: Dominated by the fundamental frequency.  
+- **Return map**: One fixed point.  
+
+> **Summary**: The system is stable and repeats identically each cycle.
+
+---
+
+### Period-2 Oscillations (γ = 1.078)
+
+With greater driving, the system undergoes its first **bifurcation**: oscillations alternate between two states.
+
+| ![](/images/period2a.png) | ![](/images/period2b.png) |
+|---------------------------|---------------------------|
+| *Period-2 – time series*  | *Period-2 – phase plane*  |
+| ![](/images/period2c.png) | ![](/images/period2d.png) |
+| *Period-2 – spectrum*     | *Period-2 – return map*   |
+
+- **Time series**: Two alternating amplitudes.  
+- **Phase plane**: The trajectory alternates between two loops.  
+- **Spectrum**: Peaks appear at half the fundamental frequency.  
+- **Return map**: Two distinct points.  
+
+> **Summary**: The first doubling — the system now needs two cycles to repeat.
+
+---
+
+### Period-4 Oscillations (γ = 1.081)
+
+Further increase in driving strength leads to another bifurcation: **Period-4 motion**.
+
+| ![](/images/period4a.png) | ![](/images/period4b.png) |
+|---------------------------|---------------------------|
+| *Period-4 – time series*  | *Period-4 – phase plane*  |
+| ![](/images/period4c.png) |                           |
+| *Period-4 – spectrum*     |                           |
+
+- **Time series**: Four distinct amplitudes before repeating.  
+- **Phase plane**: Four interwoven loops.  
+- **Spectrum**: New subharmonics appear.  
+
+> **Summary**: The doubling continues — repetition now requires four cycles.
+
+---
+
+### Period-8 Oscillations (γ = 1.0826)
+
+At even stronger driving, the system displays **Period-8 behaviour**.  
+This is the last stage before chaos.
+
+| ![](/images/period8a.png) | ![](/images/period8b.png) |
+|---------------------------|---------------------------|
+| *Period-8 – time series*  | *Period-8 – phase plane*  |
+| ![](/images/period8c.png) | ![](/images/period8d.png) |
+| *Period-8 – spectrum*     | *Period-8 – return map*   |
+
+- **Time series**: Eight alternating amplitudes.  
+- **Phase plane**: Eight-fold structure in the trajectory.  
+- **Spectrum**: A dense cluster of peaks, precursors to chaos.  
+- **Return map**: Eight visited points.  
+
+> **Summary**: With repetition stretched to eight cycles, the system is on the verge of chaos.
+
+---
+
+### The Cascade and Feigenbaum’s Constant
+
+This doubling process (Period-1 → Period-2 → Period-4 → Period-8 → …) accelerates rapidly.  
+The intervals between bifurcations shrink geometrically, converging toward the **Feigenbaum constant**:
+
+$$
+\delta \approx 4.669
+$$
+
+This universal constant governs the rate at which period-doubling bifurcations accumulate, marking the onset of chaos in a wide range of nonlinear systems.
+
 
 **Feigenbaum’s Constant:**  
 As the sequence accumulates, the ratio of bifurcation intervals converges to δ ≈ 4.669.
