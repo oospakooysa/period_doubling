@@ -62,7 +62,9 @@ Produces clean sinusoidal motion with a fixed period (6.28s, 0.158 Hz).
 ### Soft Spring Oscillator
 Adding a soft nonlinearity lengthens oscillations, introduces multiple frequencies, and changes phase-plane structure.
 
-![Soft Spring]({{ site.baseurl }}/images/softspring.png)
+![Soft Spring]({{ site.baseurl }}/images/softspring01.png)
+![Soft Spring]({{ site.baseurl }}/images/softspring02.png)
+![Soft Spring]({{ site.baseurl }}/images/softspring03.png)
 
 ### Hard Spring Oscillator
 Opposite effect: higher frequencies, shorter periods, and more force.
@@ -83,7 +85,9 @@ When forcing is added, things change rapidly. Using:
 
 Simulations show subharmonics, irregular phase planes, and eventually chaos.  
 
-![Ueda Chaos]({{ site.baseurl }}/images/ueda_chaos.png)
+![Ueda Chaos]({{ site.baseurl }}/images/ueda_chaos01.png)
+![Ueda Chaos]({{ site.baseurl }}/images/ueda_chaos02.png)
+![Ueda Chaos]({{ site.baseurl }}/images/ueda_chaos03.png)
 
 ---
 
@@ -107,6 +111,7 @@ Here’s the heart of the story. Increasing drive strength leads to bifurcations
 ![Period 4]({{ site.baseurl }}/images/period4a.png)
 ![Period 4]({{ site.baseurl }}/images/period4b.png)
 ![Period 4]({{ site.baseurl }}/images/period4c.png)
+![Period 4]({{ site.baseurl }}/images/period4d.png)
 ![Period 8]({{ site.baseurl }}/images/period8a.png)
 ![Period 8]({{ site.baseurl }}/images/period8b.png)
 ![Period 8]({{ site.baseurl }}/images/period8c.png)
