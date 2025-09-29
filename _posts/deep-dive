@@ -49,7 +49,9 @@ Validation against experimental data showed errors < 10%, confirming the model.
 ### Linear Oscillator
 Produces clean sinusoidal motion with a fixed period (6.28s, 0.158 Hz).  
 
-![Linear Oscillator]({{ site.baseurl }}/images/linear.png)
+![Linear Oscillator]({{ site.baseurl }}/images/linear01.png)
+![Linear Oscillator]({{ site.baseurl }}/images/linear02.png)
+![Linear Oscillator]({{ site.baseurl }}/images/linear03.png)
 
 ### Soft Spring Oscillator
 Adding a soft nonlinearity lengthens oscillations, introduces multiple frequencies, and changes phase-plane structure.
@@ -59,7 +61,9 @@ Adding a soft nonlinearity lengthens oscillations, introduces multiple frequenci
 ### Hard Spring Oscillator
 Opposite effect: higher frequencies, shorter periods, and more force.
 
-![Hard Spring]({{ site.baseurl }}/images/hardspring.png)
+![Hard Spring]({{ site.baseurl }}/images/hardspring01.png)
+![Hard Spring]({{ site.baseurl }}/images/hardspring02.png)
+![Hard Spring]({{ site.baseurl }}/images/hardspring03.png)
 
 ---
 
@@ -124,7 +128,10 @@ G = (ω² * r) / g
 
 For A=4.0: ~22 G – *far beyond human tolerance*.  
 
-![Skymaster Chaos]({{ site.baseurl }}/images/skymaster.png)
+![Skymaster Chaos]({{ site.baseurl }}/images/skymaster1a.png)
+![Skymaster Chaos]({{ site.baseurl }}/images/skymaster1b.png)
+![Skymaster Chaos]({{ site.baseurl }}/images/skymaster1c.png)
+![Skymaster Chaos]({{ site.baseurl }}/images/skymaster1d.png)
 
 ---
 
