@@ -123,7 +123,7 @@ The oscillator repeats the same path every cycle.
 
 With greater driving, the system undergoes its first **bifurcation**: oscillations alternate between two states.
 
-| ![](/images/period2a.png) | ![](/images/period2b.png) |
+| ![]({{ site.baseurl }}/images/period2a.png) | ![]({{ site.baseurl }}/images/period2b.png) |
 |---------------------------|---------------------------|
 | *Period-2 – time series*  | *Period-2 – phase plane*  |
 | ![]({{ site.baseurl }}/images/images/period2c.png) | ![]({{ site.baseurl }}/images/period2d.png) |
@@ -161,13 +161,13 @@ Further increase in driving strength leads to another bifurcation: **Period-4 mo
 At even stronger driving, the system displays **Period-8 behaviour**.  
 This is the last stage before chaos.
 
-| ![](/images/period8a.png) | ![](/images/period8b.png) |
+| ![]({{ site.baseurl }}/images/period8a.png) | ![]({{ site.baseurl }}/images/period8b.png) |
 |---------------------------|---------------------------|
 | *Period-8 – time series*  | *Period-8 – phase plane*  |
 | ![]({{ site.baseurl }}/images/period8c.png) | ![]({{ site.baseurl }}/images/period8d.png) |
 | *Period-8 – spectrum*     | *Period-8 – return map*   |
 
-- **Time series**: Eight alternating amplitudes.  
+- **Time series**: Eight alternating amplitudes
 - **Phase plane**: Eight-fold structure in the trajectory.  
 - **Spectrum**: A dense cluster of peaks, precursors to chaos.  
 - **Return map**: Eight visited points.  
@@ -195,25 +195,87 @@ As the sequence accumulates, the ratio of bifurcation intervals converges to δ 
 
 ## 6. Extended Findings: The SkyMaster Ride
 
-The Skymaster, a pendulum-like fairground ride, highlights how chaos links to **safety**.  
+To connect theory with the real world, we studied the **SkyMaster ride**, a fairground pendulum swing.  
+Despite its simplicity, the ride captures the essence of nonlinear dynamics and exhibits the same route to chaos observed in abstract models.  
+Here, the consequences are not only theoretical but also practical — oscillations translate directly into the **forces experienced by riders**, raising important questions of **comfort and safety**.
 
-Simulations showed:  
-- At low drive amplitude (A=1.0) – smooth oscillations, tolerable g-forces.  
-- At higher amplitudes (A=3.0–5.0) – unsafe g-forces (>10 G).  
-- Beyond A=5.0 – rolling chaotic motion.  
+---
 
-Example calculation:
+### Low-Amplitude Motion
+
+At small driving forces, the SkyMaster behaves like a nearly linear pendulum.  
+Oscillations are smooth, regular, and close to sinusoidal.
+
+| ![]({{ site.baseurl }}/images/skymaster1a.png) | ![]({{ site.baseurl }}/images/skymaster1b.png) |
+|------------------------------|------------------------------|
+| *SkyMaster – low amplitude*  | *SkyMaster – higher amplitude* |
+
+- **Low amplitude**: Periodic motion with a clear repeating cycle.  
+- **Higher amplitude**: Oscillations deviate from sinusoidal form, marking the onset of nonlinearity.  
+
+> **Summary**: At low drive, the SkyMaster is stable and predictable, with forces well within safe limits.
+
+---
+
+### Growing Nonlinearity
+
+As the driving energy increases, nonlinear effects dominate the system.  
+The oscillations grow in amplitude and complexity, and the forces acting on riders become less predictable.
+
+| ![]({{ site.baseurl }}/images/skymaster1c.png) |                              |
+|------------------------------|------------------------------|
+| *SkyMaster – g-force profile* |                              |
+
+- **G-force profile**: Riders experience rapidly varying forces, reflecting the system’s nonlinear response.  
+  These fluctuations affect not only comfort but also **safety considerations in ride design and operation**.  
+
+#### Example — estimated g-force at higher drive (safety check)
+
+Using simulation parameters, we can estimate the peak g-force for a high drive amplitude:
 
 ```
 G = (ω² * r) / g
 ```
 
-For A=4.0: ~22 G – *far beyond human tolerance*.  
+For A = 4.0:
 
-![Skymaster Chaos]({{ site.baseurl }}/images/skymaster1a.png)
-![Skymaster Chaos]({{ site.baseurl }}/images/skymaster1b.png)
-![Skymaster Chaos]({{ site.baseurl }}/images/skymaster1c.png)
-![Skymaster Chaos]({{ site.baseurl }}/images/skymaster1d.png)
+1. \(14.34 \times 14.34 = 205.6356\)  
+2. \(205.6356 \times 1.84 = 378.369504\)  
+3. \(378.369504 \times 0.57 = 215.67061728\)  
+4. \(215.67061728 \div 9.81 = 21.98\)
+
+**Result:** ≈ **22 G**
+
+> **Safety note:** This is *far beyond* normal human tolerance (amusement rides typically remain well under 5 G).  
+> Once nonlinear oscillations grow, the ride risks producing unsafe forces.
+
+> **Summary**: The system now exhibits strong nonlinear features, and safety margins must account for unexpected force variations.
+
+---
+
+### Rolling Chaotic Motion
+
+Beyond a critical threshold, the SkyMaster’s motion becomes irregular and unpredictable.  
+Instead of smooth oscillations, the ride enters a state of **rolling chaotic motion**.
+
+| ![]({{ site.baseurl }}/images/skymaster1d.png) | ![]({{ site.baseurl }}/images/skymaster1e.png) |
+|------------------------------|------------------------------|
+| *Onset of chaos*             | *Rolling chaotic motion*     |
+
+- **Onset of chaos**: Motion becomes aperiodic and highly sensitive to initial conditions.  
+- **Rolling chaotic motion**: Large, irregular swings dominate, making long-term prediction impossible.  
+
+> **Summary**: At high drive, the SkyMaster exhibits rolling chaotic motion.  
+> This unpredictability makes control difficult and increases risks to rider safety.
+
+---
+
+### From Theory to Experience
+
+The SkyMaster demonstrates how **nonlinear oscillators and chaos theory** are not confined to equations and simulations.  
+They manifest directly in mechanical systems — and in this case, in the **safety of real-world amusement rides**.  
+Chaos here is not just abstract: it is something riders feel in their bodies.
+
 
 ---
 
