@@ -185,9 +185,10 @@ This repeats — period-4, period-8 — until the system is no longer periodic a
 
 $\delta = \lim_{n \to \infty} \frac{f_{n} - f_{n-1}}{f_{n+1} - f_{n}}$
 
-\[
+$$
 \delta = \lim_{n \to \infty} \frac{f_{n} - f_{n-1}}{f_{n+1} - f_{n}} \approx 4.669
-\]
+$$
+
 
 Here, \(f_n\) are the parameter values where bifurcations occur.  
 
