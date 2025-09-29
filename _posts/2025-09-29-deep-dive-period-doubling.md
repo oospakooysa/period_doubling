@@ -1,7 +1,8 @@
 ---
-layout: post
+layout: default
 title: "From Oscillators to Chaos: A Deep Dive into Period Doubling"
-categories: physics chaos nonlinear
+date: 2025-09-29
+tags: [physics, chaos, nonlinear]
 ---
 
 # From Oscillators to Chaos: A Deep Dive into Period Doubling
