@@ -96,10 +96,10 @@ Here’s the heart of the story. Increasing drive strength leads to bifurcations
 - **Period 4 (γ = 1.081)** – Doubling again  
 - **Period 8 (γ = 1.0826)** – Doubling continues  
 
-![Period 1]({{ site.baseurl }}/images/period1a.png)
-![Period 1]({{ site.baseurl }}/images/period1b.png)
-![Period 1]({{ site.baseurl }}/images/period1c.png)
-![Period 1]({{ site.baseurl }}/images/period1d.png)
+![Period 1 Time Series]({{ site.baseurl }}/images/period1a.png)
+![Period 1 Phase Plane]({{ site.baseurl }}/images/period1b.png)
+![Period 1 Spectrum]({{ site.baseurl }}/images/period1c.png)
+![Period 1 Return Map]({{ site.baseurl }}/images/period1d.png)
 ![Period 2]({{ site.baseurl }}/images/period2a.png)
 ![Period 2]({{ site.baseurl }}/images/period2b.png)
 ![Period 2]({{ site.baseurl }}/images/period2c.png)
