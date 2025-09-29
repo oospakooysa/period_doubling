@@ -126,7 +126,7 @@ With greater driving, the system undergoes its first **bifurcation**: oscillatio
 | ![](/images/period2a.png) | ![](/images/period2b.png) |
 |---------------------------|---------------------------|
 | *Period-2 – time series*  | *Period-2 – phase plane*  |
-| ![](/images/period2c.png) | ![](/images/period2d.png) |
+| ![]({{ site.baseurl }}/images/images/period2c.png) | ![]({{ site.baseurl }}/images/period2d.png) |
 | *Period-2 – spectrum*     | *Period-2 – return map*   |
 
 - **Time series**: Two alternating amplitudes.  
@@ -142,10 +142,10 @@ With greater driving, the system undergoes its first **bifurcation**: oscillatio
 
 Further increase in driving strength leads to another bifurcation: **Period-4 motion**.
 
-| ![](/images/period4a.png) | ![](/images/period4b.png) |
+| ![]({{ site.baseurl }}/images/period4a.png) | ![]({{ site.baseurl }}/images/period4b.png) |
 |---------------------------|---------------------------|
 | *Period-4 – time series*  | *Period-4 – phase plane*  |
-| ![](/images/period4c.png) |                           |
+| ![]({{ site.baseurl }}/images/period4c.png) |                           |
 | *Period-4 – spectrum*     |                           |
 
 - **Time series**: Four distinct amplitudes before repeating.  
@@ -164,7 +164,7 @@ This is the last stage before chaos.
 | ![](/images/period8a.png) | ![](/images/period8b.png) |
 |---------------------------|---------------------------|
 | *Period-8 – time series*  | *Period-8 – phase plane*  |
-| ![](/images/period8c.png) | ![](/images/period8d.png) |
+| ![]({{ site.baseurl }}/images/period8c.png) | ![]({{ site.baseurl }}/images/period8d.png) |
 | *Period-8 – spectrum*     | *Period-8 – return map*   |
 
 - **Time series**: Eight alternating amplitudes.  
