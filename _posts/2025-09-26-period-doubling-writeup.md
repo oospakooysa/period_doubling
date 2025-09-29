@@ -257,8 +257,8 @@ simulated function Tick(float DeltaTime) {
 <div style="max-width:500px; margin:1.5rem auto; text-align:center;">
   <video autoplay loop muted playsinline 
          style="width:100%; height:auto; display:block; margin:0 auto;">
-    <source src="/period_doubling/images/ride_pendulum_reverse_loop.webm" type="video/webm">
-    <source src="/period_doubling/images/ride_pendulum_reverse_loop.mp4" type="video/mp4">
+    <source src="/period_doubling/images/skymaster.webm" type="video/webm">
+    <source src="/period_doubling/images/skymaster.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 </div>
