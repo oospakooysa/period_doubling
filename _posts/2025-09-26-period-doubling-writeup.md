@@ -285,6 +285,8 @@ Unlike a playground swing:
 - **`MAS14P_SkyMaster.uc`** defines the mechanics.
 - **`SciencePark_Level_Projects2021.udk`** places it in a park environment.
 - Motion coded manually, not left to default physics.
+- **`MAS14_Actor.uc`** was implemented as a base class to handle custom physics updates and provide a foundation for the Skymaster and Apocalypse actors. This ensured consistency across rides and allowed direct control over physics rather than relying on UDK’s defaults.
+
 
 ---
 
