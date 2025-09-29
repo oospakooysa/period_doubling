@@ -1,0 +1,163 @@
+---
+layout: post
+title: "From Oscillators to Chaos: A Deep Dive into Period Doubling"
+categories: physics chaos nonlinear
+---
+
+# From Oscillators to Chaos: A Deep Dive into Period Doubling
+
+This post expands on the material in my [period doubling site](https://oospakooysa.github.io/period_doubling/), drawing from extended worked examples, figures, and simulations. It’s aimed at readers who want to dig deeper into the physics, coding, and data behind nonlinear oscillators and chaos.
+
+---
+
+## 1. Introduction
+
+Period-doubling bifurcations provide one of the cleanest routes to chaos. Starting with simple oscillators, we’ll explore how gradually adding nonlinearity, forcing, and amplitude changes drive systems from predictable motion into chaotic behaviour.  
+
+We’ll use real-world analogies (fairground rides, suspension systems), coding in Octave, and figures from simulations to make this journey concrete.
+
+---
+
+## 2. Simple Systems and Verification
+
+Before diving into chaos, we first **verify** our tools.
+
+### The Apocalypse Ride
+A 1D dynamic system, where a car free-falls from 54 m before braking at ~6 m.  
+We modelled the ride in Octave, observing the velocity and displacement over time.
+
+*Key insight:* The braking distance relates to gravitational force via:
+
+```
+h₁ = (mg / B) * h₂
+```
+
+Graphs of velocity and acceleration confirm when braking occurs (~10.2s) and how deceleration peaks.
+
+![Apocalypse Ride Velocity]({{ site.baseurl }}/images/apocalypse_velocity.png)  
+![Apocalypse Ride Acceleration]({{ site.baseurl }}/images/apocalypse_accel.png)
+
+---
+
+### Monster Truck Suspension
+Here we verified solvers. Euler vs Euler-Cromer gave clear differences: Euler diverges, while Euler-Cromer preserves stable oscillations.
+
+![Suspension Euler]({{ site.baseurl }}/images/suspension_euler.png)  
+![Suspension Cromer]({{ site.baseurl }}/images/suspension_cromer.png)
+
+Validation against experimental data showed errors < 10%, confirming the model.
+
+---
+
+## 3. Linear vs Nonlinear Oscillators
+
+### Linear Oscillator
+Produces clean sinusoidal motion with a fixed period (6.28s, 0.158 Hz).  
+
+![Linear Oscillator]({{ site.baseurl }}/images/linear01.png)
+![Linear Oscillator]({{ site.baseurl }}/images/linear02.png)
+![Linear Oscillator]({{ site.baseurl }}/images/linear03.png)
+
+### Soft Spring Oscillator
+Adding a soft nonlinearity lengthens oscillations, introduces multiple frequencies, and changes phase-plane structure.
+
+![Soft Spring]({{ site.baseurl }}/images/softspring.png)
+
+### Hard Spring Oscillator
+Opposite effect: higher frequencies, shorter periods, and more force.
+
+![Hard Spring]({{ site.baseurl }}/images/hardspring01.png)
+![Hard Spring]({{ site.baseurl }}/images/hardspring02.png)
+![Hard Spring]({{ site.baseurl }}/images/hardspring03.png)
+
+---
+
+## 4. Forced Oscillators & Chaos (Ueda’s Equation)
+
+When forcing is added, things change rapidly. Using:
+
+```
+ẍ = -δẋ - βx³ + Fcos(ωt)
+```
+
+Simulations show subharmonics, irregular phase planes, and eventually chaos.  
+
+![Ueda Chaos]({{ site.baseurl }}/images/ueda_chaos.png)
+
+---
+
+## 5. Period-Doubling Bifurcations
+
+Here’s the heart of the story. Increasing drive strength leads to bifurcations:
+
+- **Period 1 (γ = 1.060)** – Stable, single oscillation  
+- **Period 2 (γ = 1.078)** – Motion doubles period  
+- **Period 4 (γ = 1.081)** – Doubling again  
+- **Period 8 (γ = 1.0826)** – Doubling continues  
+
+![Period 1]({{ site.baseurl }}/images/period1a.png)
+![Period 1]({{ site.baseurl }}/images/period1b.png)
+![Period 1]({{ site.baseurl }}/images/period1c.png)
+![Period 1]({{ site.baseurl }}/images/period1d.png)
+![Period 2]({{ site.baseurl }}/images/period2a.png)
+![Period 2]({{ site.baseurl }}/images/period2b.png)
+![Period 2]({{ site.baseurl }}/images/period2c.png)
+![Period 2]({{ site.baseurl }}/images/period2d.png)
+![Period 4]({{ site.baseurl }}/images/period4a.png)
+![Period 4]({{ site.baseurl }}/images/period4b.png)
+![Period 4]({{ site.baseurl }}/images/period4c.png)
+![Period 8]({{ site.baseurl }}/images/period8a.png)
+![Period 8]({{ site.baseurl }}/images/period8b.png)
+![Period 8]({{ site.baseurl }}/images/period8c.png)
+![Period 8]({{ site.baseurl }}/images/period8d.png)
+
+**Feigenbaum’s Constant:**  
+As the sequence accumulates, the ratio of bifurcation intervals converges to δ ≈ 4.669.
+
+---
+
+## 6. Extended Findings: The SkyMaster Ride
+
+The Skymaster, a pendulum-like fairground ride, highlights how chaos links to **safety**.  
+
+Simulations showed:  
+- At low drive amplitude (A=1.0) – smooth oscillations, tolerable g-forces.  
+- At higher amplitudes (A=3.0–5.0) – unsafe g-forces (>10 G).  
+- Beyond A=5.0 – rolling chaotic motion.  
+
+Example calculation:
+
+```
+G = (ω² * r) / g
+```
+
+For A=4.0: ~22 G – *far beyond human tolerance*.  
+
+![Skymaster Chaos]({{ site.baseurl }}/images/skymaster1a.png)
+![Skymaster Chaos]({{ site.baseurl }}/images/skymaster1b.png)
+![Skymaster Chaos]({{ site.baseurl }}/images/skymaster1c.png)
+![Skymaster Chaos]({{ site.baseurl }}/images/skymaster1d.png)
+
+---
+
+## 7. Chaos and Beyond
+
+We also observed phenomena like the **jump phenomenon**, where nonlinear resonance leads to sudden amplitude jumps.  
+
+Bifurcation diagrams (below) map regions of stability, doubling, and chaos.  
+
+![Bifurcation Diagram]({{ site.baseurl }}/images/bifurcation.png)
+
+---
+
+## 8. Conclusion
+
+- We began with simple oscillators → added nonlinear springs → forced systems → period doubling → chaos.  
+- Verification steps ensured our models matched reality.  
+- Applications like the Skymaster ride show that chaos isn’t just theoretical: it has real engineering and safety implications.  
+
+For a lighter introduction, check the [overview site](https://oospakooysa.github.io/period_doubling/). For those who want the deep dive—you just read it.
+
+---
+
+*Figures and data from Octave, UDK, Webots, and detailed analysis in the original Physics study.*
