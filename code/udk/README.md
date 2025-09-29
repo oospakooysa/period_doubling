@@ -6,9 +6,20 @@ This folder contains Unreal Development Kit (UDK) scripts and level files used i
 
 | Filename | Purpose / Description |
 |---|------------------------------|
-| `MAS14P_SkyMaster.uc` | UnrealScript file implementing the **Skymaster ride** dynamics and control logic. |
-| `MAS14_Apocalypse_FSM.uc` | UnrealScript finite-state machine for the **Apocalypse ride**. |
+| `MAS14P_SkyMaster.uc` | Implements the Skymaster ride as a nonlinear pendulum, driven by motors and capable of showing bifurcations and chaotic motion. |
+| `MAS14_Apocalypse_FSM.uc` | Models the Apocalypse drop-tower ride using a finite-state machine. Captures staged dynamics such as lift, pause, drop, and rebound. |
 | `SciencePark_Level_Projects2021.udk` | UDK level file that integrates the Skymaster and Apocalypse rides into a virtual environment. |
+
+## Supporting Code  
+
+In addition to the ride-specific scripts, this project includes a custom base actor:  
+
+- **`MAS14_Actor.uc`** — A core parent class extending UDK’s `Actor`.  
+  - Provides custom physics update loops.  
+  - Ensures consistent behavior across rides.  
+  - Serves as the foundation for `MAS14P_SkyMaster.uc` and `MAS14_Apocalypse_FSM.uc`.  
+
+This file may not produce visible results on its own, but it was essential for structuring the project within UDK’s class hierarchy and for overriding default physics behavior.
 
 ## Usage Instructions
 
