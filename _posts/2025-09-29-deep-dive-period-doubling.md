@@ -356,8 +356,8 @@ With greater driving, the system undergoes its first **bifurcation**: oscillatio
 
 | ![]({{ site.baseurl }}/images/period2a.png) | ![]({{ site.baseurl }}/images/period2b.png) |
 |---------------------------|---------------------------|
-| *Period-2 – time series*  | *Period-2 – phase plane*  |
-| ![]({{ site.baseurl }}/images/images/period2c.png) | ![]({{ site.baseurl }}/images/period2d.png) |
+| *Period-2 – time series*  | *Period-2 – plot plane*  |
+| <img src="{{ site.baseurl }}/images/period2c.png" width="80%"> | <img src="{{ site.baseurl }}/images/period2d.png" width="80%">                            |
 | *Period-2 – spectrum*     | *Period-2 – return map*   |
 
 - **Time series**: Two alternating amplitudes.  
@@ -375,9 +375,9 @@ Further increase in driving strength leads to another bifurcation: **Period-4 mo
 
 | <img src="{{ site.baseurl }}/images/period4a.png" width="80%"> | <img src="{{ site.baseurl }}/images/period4b.png" width="80%"> |
 |---------------------------|---------------------------|
-| *Period-4 – time series*  | *Period-4 – phase plane*  |
-| <img src="{{ site.baseurl }}/images/period4c.png" width="80%"> |                           |
-| *Period-4 – spectrum*     |                           |
+| *Period-4 – time series*  | *Period-4 – plot*  |
+| <img src="{{ site.baseurl }}/images/period4c.png" width="80%"> | <img src="{{ site.baseurl }}/images/period4d.png" width="80%">                            |
+| *Period-4 – phase*     | *Period-4 – spectrum*     |
 
 - **Time series**: Four distinct amplitudes before repeating.  
 - **Phase plane**: Four interwoven loops.  
