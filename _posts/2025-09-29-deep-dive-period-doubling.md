@@ -50,6 +50,17 @@ Validation against experimental data showed errors < 10%, confirming the model.
 
 ---
 
+### Exact Verification (Activity 3)
+Finally, we compared numerical solutions directly against the analytical small-angle pendulum.  
+For fine step sizes (Δt = 0.01), the agreement is excellent.  
+But for coarser timesteps, numerical error grows dramatically — reaching about **54% error**.
+
+| <img src="{{ site.baseurl }}/images/verification_exact.png" alt="Verification by exact measurement (error percentage)" width="80%"> |
+|-----------------------------------------------------------------------------------------------------------------------------------|
+| *Verification by Exact Measurement – Numerical solution shows ~54% error at large Δt compared to the analytical solution.* |
+
+---
+
 ## 3. Linear vs Nonlinear Oscillators
 
 Before exploring forcing and bifurcations, it helps to compare **linear** and **nonlinear** oscillators.  
@@ -104,11 +115,11 @@ Linearity guarantees *predictability and simplicity*. Nonlinearity breaks this, 
 
 | <img src="{{ site.baseurl }}/images/linear1.png" alt="Linear oscillator time series" width="80%"> |
 |--------------------------------------------------------------------------------------------------|
-| *Time series – sinusoidal motion* |
+| **Time series:** Clean sinusoidal motion with constant amplitude |
 
 | <img src="{{ site.baseurl }}/images/linear2.png" alt="Linear oscillator phase plane" width="80%"> | <img src="{{ site.baseurl }}/images/linear3.png" alt="Linear oscillator spectrum" width="80%"> |
 |--------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
-| *Phase plane – closed ellipse* | *Spectrum – single peak at 0.158 Hz* |
+| **Phase plane:** Perfect closed ellipse — hallmark of linear harmonic motion | **Spectrum:** Single sharp frequency peak at 0.158 Hz (period = 6.28 s) — no distortion or harmonics |
 
 
 - Time series: pure sinusoid.  
@@ -123,9 +134,13 @@ Linearity guarantees *predictability and simplicity*. Nonlinearity breaks this, 
 
 #### Nonlinear Oscillator — Soft Spring (β < 0)
 
-| <img src="{{ site.baseurl }}/images/softspring01.png" width="80%"> | <img src="{{ site.baseurl }}/images/softspring02.png" width="80%"> |
-|-----------------------------|-----------------------------|
-| *Nonlinear oscillator – soft spring time series* | *Nonlinear oscillator – spectrum* |
+| <img src="{{ site.baseurl }}/images/softspring01.png" alt="Soft spring time series" width="80%"> |
+|--------------------------------------------------------------------------------------------------|
+| *Time series – soft spring (longer oscillation period than linear)* |
+
+| <img src="{{ site.baseurl }}/images/softspring03.png" alt="Soft spring phase plane" width="80%"> | <img src="{{ site.baseurl }}/images/softspring02.png" alt="Soft spring spectrum" width="80%"> |
+|--------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
+| *Phase plane – elliptical orbit distorted by softening nonlinearity* | *Spectrum – harmonics and subharmonics present* |
 
 - Velocity range: **~0 to 1.4** (slightly reduced compared to linear ~0 to 1.5).  
 - Lower velocity → **longer period** than the linear case.  
@@ -137,9 +152,13 @@ Linearity guarantees *predictability and simplicity*. Nonlinearity breaks this, 
 
 #### Nonlinear Oscillator — Hard Spring (β > 0)
 
-| ![]({{ site.baseurl }}/images/hardspring01.png) | ![]({{ site.baseurl }}/images/hardspring02.png) |
-|-----------------------------|-----------------------------|
-| *Nonlinear oscillator – hard spring time series* | *Nonlinear oscillator – spectrum* |
+| <img src="{{ site.baseurl }}/images/hardspring01.png" alt="Hard spring time series" width="80%"> |
+|-------------------------------------------------------------------------------------------------|
+| *Time series – hard spring (shorter oscillation period, stiff response)* |
+
+| <img src="{{ site.baseurl }}/images/hardspring02.png" alt="Hard spring phase plane" width="80%"> | <img src="{{ site.baseurl }}/images/hardspring03.png" alt="Hard spring spectrum" width="80%"> |
+|-------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
+| *Phase plane – diamond-like orbit, showing stiffening effect* | *Spectrum – strong higher harmonics due to hardening* |
 
 - Velocity and frequency are both **greater** than in the linear case.  
 - Result: **shorter period**.  
@@ -290,9 +309,9 @@ The oscillator repeats the same path every cycle.
 
 | ![Period 1 Time Series]({{ site.baseurl }}/images/period1a.png) | ![Period 1 Phase Plane]({{ site.baseurl }}/images/period1b.png) |
 |---------------------------|---------------------------|
-| *Period-1 – time series*  | *Period-1 – phase plane*  |
+| **Time series:** Stable single oscillation  | **Phase plane:** Single closed loop — limit cycle  |
 | ![Period 1 Spectrum]({{ site.baseurl }}/images/period1c.png) | ![Period 1 Return Map]({{ site.baseurl }}/images/period1d.png) |
-| *Period-1 – spectrum*     | *Period-1 – return map*   |
+| **Spectrum:** Single sharp peak — pure periodic motion     | **Return map:** One fixed point — system repeats identically   |
 
 - **Time series**: Regular oscillation with a single amplitude.  
 - **Phase plane**: A single closed loop.  
@@ -309,9 +328,9 @@ With greater driving, the system undergoes its first **bifurcation**: oscillatio
 
 | ![]({{ site.baseurl }}/images/period2a.png) | ![]({{ site.baseurl }}/images/period2b.png) |
 |---------------------------|---------------------------|
-| *Period-2 – time series*  | *Period-2 – plot plane*  |
+| **Time series:** Oscillation doubles its period (two distinct peaks)  | **Phase plane:** Two separate loops, showing the doubled cycle  |
 | <img src="{{ site.baseurl }}/images/period2c.png" width="80%"> | <img src="{{ site.baseurl }}/images/period2d.png" width="80%">                            |
-| *Period-2 – spectrum*     | *Period-2 – return map*   |
+| **Spectrum:** Additional frequency components appear (subharmonic)     | **Return map:** Two distinct points — system alternates between them   |
 
 - **Time series**: Two alternating amplitudes.  
 - **Phase plane**: The trajectory alternates between two loops.  
@@ -328,9 +347,9 @@ Further increase in driving strength leads to another bifurcation: **Period-4 mo
 
 | <img src="{{ site.baseurl }}/images/period4a.png" width="80%"> | <img src="{{ site.baseurl }}/images/period4b.png" width="80%"> |
 |---------------------------|---------------------------|
-| *Period-4 – time series*  | *Period-4 – plot*  |
+| **Time series:** Four-cycle visible in the oscillation pattern  | **Phase plane:** Four distinct loops — evidence of another bifurcation  |
 | <img src="{{ site.baseurl }}/images/period4c.png" width="80%"> | <img src="{{ site.baseurl }}/images/period4d.png" width="80%">                            |
-| *Period-4 – phase*     | *Period-4 – spectrum*     |
+| **Spectrum:** Richer structure with more harmonics     | **Return map:** Four distinct points — system cycles through four states     |
 
 - **Time series**: Four distinct amplitudes before repeating.  
 - **Phase plane**: Four interwoven loops.  
@@ -347,9 +366,9 @@ This is the last stage before chaos.
 
 | ![]({{ site.baseurl }}/images/period8a.png) | ![]({{ site.baseurl }}/images/period8b.png) |
 |---------------------------|---------------------------|
-| *Period-8 – time series*  | *Period-8 – phase plane*  |
+| **Time series:** Eight-cycle, motion appears increasingly complex  | **Phase plane:** Eight small loops crowding together — precursor to chaos  |
 | ![]({{ site.baseurl }}/images/period8c.png) | ![]({{ site.baseurl }}/images/period8d.png) |
-| *Period-8 – spectrum*     | *Period-8 – return map*   |
+| **Spectrum:** Broadband structure beginning to emerge     | **Return map:** Eight points converge toward a continuous band — onset of chaotic motion   |
 
 - **Time series**: Eight alternating amplitudes
 - **Phase plane**: Eight-fold structure in the trajectory.  
