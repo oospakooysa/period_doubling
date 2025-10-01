@@ -123,7 +123,7 @@ Linearity guarantees *predictability and simplicity*. Nonlinearity breaks this, 
 
 #### Nonlinear Oscillator — Soft Spring (β < 0)
 
-| ![]({{ site.baseurl }}/images/nonlinear1.png) | ![]({{ site.baseurl }}/images/nonlinear2.png) |
+| <img src="{{ site.baseurl }}/images/nonlinear1.png" width="80%"> | <img src="{{ site.baseurl }}/images/nonlinear2.png" width="80%"> |
 |-----------------------------|-----------------------------|
 | *Nonlinear oscillator – soft spring time series* | *Nonlinear oscillator – spectrum* |
 
@@ -294,15 +294,15 @@ The results show the transition from periodic motion to subharmonics and eventua
 - **At intermediate forcing:** Subharmonics appear — oscillations repeat only after 2T, 4T, …  
 - **At high forcing:** Chaotic response with irregular time series and fractal Poincaré maps.
 
-| ![]({{ site.baseurl }}/images/ueda1a.png) | ![]({{ site.baseurl }}/images/ueda1b.png) |
+| <img src="{{ site.baseurl }}/images/ueda1a.png" width="80%"> | <img src="{{ site.baseurl }}/images/ueda1b.png" width="80%"> |
 |-------------------------|-------------------------|
 | *Ueda – low drive time series* | *Ueda – low drive phase plane* |
 
-| ![]({{ site.baseurl }}/images/ueda2a.png) | ![]({{ site.baseurl }}/images/ueda2b.png) |
+| <img src="{{ site.baseurl }}/images/ueda2a.png" width="80%"> | <img src="{{ site.baseurl }}/images/ueda2b.png" width="80%"> |
 |-------------------------|-------------------------|
 | *Ueda – intermediate forcing (time series)* | *Ueda – intermediate forcing (phase plane)* |
 
-| ![]({{ site.baseurl }}/images/ueda3a.png) | ![]({{ site.baseurl }}/images/ueda3b.png) |
+| <img src="{{ site.baseurl }}/images/ueda3a.png" width="80%"> | <img src="{{ site.baseurl }}/images/ueda3b.png" width="80%"> |
 |-------------------------|-------------------------|
 | *Ueda – chaotic time series* | *Ueda – chaotic phase plane* |
 
@@ -373,10 +373,10 @@ With greater driving, the system undergoes its first **bifurcation**: oscillatio
 
 Further increase in driving strength leads to another bifurcation: **Period-4 motion**.
 
-| ![]({{ site.baseurl }}/images/period4a.png) | ![]({{ site.baseurl }}/images/period4b.png) |
+| <img src="{{ site.baseurl }}/images/period4a.png" width="80%"> | <img src="{{ site.baseurl }}/images/period4b.png" width="80%"> |
 |---------------------------|---------------------------|
 | *Period-4 – time series*  | *Period-4 – phase plane*  |
-| ![]({{ site.baseurl }}/images/period4c.png) |                           |
+| <img src="{{ site.baseurl }}/images/period4c.png" width="80%"> |                           |
 | *Period-4 – spectrum*     |                           |
 
 - **Time series**: Four distinct amplitudes before repeating.  
