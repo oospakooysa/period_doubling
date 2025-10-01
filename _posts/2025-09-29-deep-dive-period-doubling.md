@@ -106,6 +106,13 @@ Linearity guarantees *predictability and simplicity*. Nonlinearity breaks this, 
 |--------------------------|--------------------------|
 | *Linear oscillator – time series* | *Linear oscillator – spectrum* |
 
+#### Linear Oscillator (Test A)
+
+| ![]({{ site.baseurl }}/images/linear1.png) | ![]({{ site.baseurl }}/images/linear2.png) | ![]({{ site.baseurl }}/images/linear3.png) |
+|--------------------------------------------|--------------------------------------------|--------------------------------------------|
+| *Time series – sinusoidal motion* | *Phase plane – closed ellipse* | *Spectrum – single peak at 0.158 Hz* |
+
+
 - Time series: pure sinusoid.  
 - Spectrum: one clear peak at the fundamental frequency.  
 - Simulation result:  
