@@ -273,7 +273,6 @@ Ueda’s equation shows how **external driving** interacts with **nonlinearity**
 This transition mirrors the behaviour we later observe in real systems like the **SkyMaster ride**, where forcing from motors translates into irregular — and potentially unsafe — motion.  
 In both cases, forcing is the **gateway to chaos**.
 
-
 ---
 
 ## 5. Period-Doubling Bifurcations
@@ -407,9 +406,9 @@ Oscillations are smooth, regular, and close to sinusoidal.
 As the driving energy increases, nonlinear effects dominate the system.  
 The oscillations grow in amplitude and complexity, and the forces acting on riders become less predictable.
 
-| ![]({{ site.baseurl }}/images/skymaster1c.png) |                              |
-|------------------------------|------------------------------|
-| *SkyMaster – g-force profile* |                              |
+![]({{ site.baseurl }}/images/skymaster1c.png) |
+|------------------------------|
+| *SkyMaster – g-force profile* |
 
 - **G-force profile**: Riders experience rapidly varying forces, reflecting the system’s nonlinear response.  
   These fluctuations affect not only comfort but also **safety considerations in ride design and operation**.  
