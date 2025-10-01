@@ -147,52 +147,6 @@ Linearity guarantees *predictability and simplicity*. Nonlinearity breaks this, 
 
 > **Summary**: The hard spring compresses the oscillation period and introduces harmonics.
 
-### 3.2 Applying the Model (Your Simulations)
-
-#### Linear Oscillator
-
-| ![]({{ site.baseurl }}/images/linear1.png) | ![]({{ site.baseurl }}/images/linear2.png) |
-|--------------------------|--------------------------|
-| *Linear oscillator – time series* | *Linear oscillator – spectrum* |
-
-- Time series: pure sinusoid.  
-- Spectrum: one clear peak at the fundamental frequency.  
-- Simulation result:  
-  - **Period = 6.28 s**  
-  - **Frequency = 0.158 Hz**  
-
-> **Summary**: The linear oscillator produces clean sinusoidal motion with a fixed period, independent of amplitude.
-
----
-
-#### Nonlinear Oscillator — Soft Spring (β < 0)
-
-| ![]({{ site.baseurl }}/images/nonlinear1.png) | ![]({{ site.baseurl }}/images/nonlinear2.png) |
-|-----------------------------|-----------------------------|
-| *Soft spring – time series* | *Soft spring – spectrum* |
-
-- Velocity range: **~0 to 1.4** (slightly reduced vs linear ~0 to 1.5).  
-- Lower velocity → **longer period** than the linear case.  
-- Spectrum: **two harmonics** appear.  
-
-> **Summary**: The soft spring stretches the oscillation period and introduces harmonics.
-
----
-
-#### Nonlinear Oscillator — Hard Spring (β > 0)
-
-| ![]({{ site.baseurl }}/images/nonlinear3.png) | ![]({{ site.baseurl }}/images/nonlinear4.png) |
-|-----------------------------|-----------------------------|
-| *Hard spring – time series* | *Hard spring – spectrum* |
-
-- Velocity and frequency are both **greater** than in the linear case.  
-- Result: **shorter period**.  
-- Spectrum: **two harmonics** appear.  
-
-> **Summary**: The hard spring compresses the oscillation period and introduces harmonics.
-
----
-
 #### Comparison Table
 
 | Oscillator type | Period (s)       | Frequency (Hz) | Velocity range | Spectrum features     |
