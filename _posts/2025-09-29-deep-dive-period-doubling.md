@@ -123,7 +123,7 @@ Linearity guarantees *predictability and simplicity*. Nonlinearity breaks this, 
 
 #### Nonlinear Oscillator — Soft Spring (β < 0)
 
-| <img src="{{ site.baseurl }}/images/nonlinear1.png" width="80%"> | <img src="{{ site.baseurl }}/images/nonlinear2.png" width="80%"> |
+| <img src="{{ site.baseurl }}/images/softspring01.png" width="80%"> | <img src="{{ site.baseurl }}/images/softspring02.png" width="80%"> |
 |-----------------------------|-----------------------------|
 | *Nonlinear oscillator – soft spring time series* | *Nonlinear oscillator – spectrum* |
 
@@ -137,7 +137,7 @@ Linearity guarantees *predictability and simplicity*. Nonlinearity breaks this, 
 
 #### Nonlinear Oscillator — Hard Spring (β > 0)
 
-| ![]({{ site.baseurl }}/images/nonlinear3.png) | ![]({{ site.baseurl }}/images/nonlinear4.png) |
+| ![]({{ site.baseurl }}/images/hardspring01.png) | ![]({{ site.baseurl }}/images/hardspring02.png) |
 |-----------------------------|-----------------------------|
 | *Nonlinear oscillator – hard spring time series* | *Nonlinear oscillator – spectrum* |
 
