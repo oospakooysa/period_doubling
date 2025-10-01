@@ -1,46 +1,59 @@
-# Period Doubling and a Route to Chaos
+# Period Doubling and Chaos
 
-This project explores the fascinating **route to chaos via period doubling**, combining both analytical simulations in **GNU Octave** and immersive models in **Unreal Engine 3 (UDK)**.  
-
-The work demonstrates how simple oscillators evolve from predictable, linear systems into rich, chaotic behavior — and how those dynamics can be visualized in real-world analogs like fairground rides.
-
----
-
-## 📖 Explore the Project  
-
-- 📘 [Full Report](https://oospakooysa.github.io/period_doubling/2025/09/26/period-doubling-writeup.html) — complete narrative + technical deep dive  
-- 🌍 [Popular Abstract](https://oospakooysa.github.io/period_doubling/2025/09/26/period-doubling-summary-popular.html) — accessible overview  
-- 📑 [Research Abstract](https://oospakooysa.github.io/period_doubling/2025/09/26/period-doubling-summary-research.html) — concise technical summary  
+This project explores the **period-doubling route to chaos** in nonlinear oscillators.  
+It combines numerical simulations, visualisations, and extended writeups to show how simple systems transition from stable periodic motion into complex, chaotic dynamics.  
+Along the way, it connects the mathematics to **real-world applications** — from amusement ride safety to suspension systems.
 
 ---
 
-## 📂 Code
+## 📑 Explore the Project
 
-Supporting simulation code is provided in the [`code/`](./code) directory.
-
-### 🔹 [Octave Scripts](./code/octave)  
-Numerical models and scripts used to generate bifurcation diagrams, time series, and the jump phenomenon.  
-See [`code/octave/README.md`](./code/octave/README.md) for details.
-
-### 🔹 [UDK Assets](./code/udk)  
-Unreal Development Kit scripts and level files that reproduce fairground ride dynamics (Skymaster, Apocalypse) in a 3D environment.  
-See [`code/udk/README.md`](./code/udk/README.md) for details.
+- 📘 [Full Report](https://oospakooysa.github.io/period_doubling/)  
+- 🔍 [Deep Dive: Period Doubling](https://oospakooysa.github.io/period_doubling/2025/09/29/deep-dive-period-doubling.html)  
+- ✨ [Popular Abstract](https://oospakooysa.github.io/period_doubling/popular)  
+- 📄 [Research Abstract](https://oospakooysa.github.io/period_doubling/research)  
 
 ---
 
-## 🚀 How to Reproduce
+## 💻 Code
 
-- **Octave simulations**  
-  Run the `.m` scripts in GNU Octave to reproduce figures from the writeup.  
+Supporting code is provided for both numerical simulations and visualisation.
 
-- **UDK simulations**  
-  Install UDK (2015-01 release), copy `.uc` and `.udk` files into the correct folders, and rebuild scripts.  
+- [Octave/Matlab](./code/octave/README.md) – pendulum, suspension, bifurcation, and chaos simulations.  
+- [Unreal Development Kit (UDK)](./code/udk/README.md) – interactive ride and motion simulations.  
+
+---
+
+## ⚙️ How to Reproduce
+
+### Octave / MATLAB
+```bash
+cd code/octave
+octave simulate_period_doubling.m
+```
+Figures are saved in `/images/`.
+
+### Unreal Development Kit
+Open the project in UDK and run the simulation environments directly.
 
 ---
 
-## 📌 Notes
+## 📝 Notes
 
-- This project was originally inspired by a university assignment but has been extended and restructured into a full technical + creative demonstration.  
-- All code is provided as-is for educational and research purposes.  
+- Originally inspired by a university assignment, but extended into a broader exploration of nonlinear dynamics.  
+- Analyses tie back to real-world systems, bridging the gap between **theory and application**.  
 
 ---
+
+## 📚 References
+
+- Feigenbaum, M. J. *Quantitative Universality for a Class of Nonlinear Transformations*. Journal of Statistical Physics, 19(1), 25–52, 1978.  
+- Ueda, Y. *Randomly Transitional Phenomena in the System Governed by Duffing’s Equation*. Japan Journal of Applied Physics, 18(10), 1979.  
+
+
+---
+
+## 📜 License
+
+This repository is released under the **MIT License**.  
+Figures and simulations are free to use with attribution.  
