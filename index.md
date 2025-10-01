@@ -26,7 +26,7 @@ Using both **GNU Octave** and **Unreal Engine (UDK)**, I recreated nonlinear sys
   *A concise, technical summary for a scientific audience.*
 
 - 📘 [Full Report]({{ site.baseurl }}/2025/09/26/period-doubling-writeup.html)  
-  *A complete narrative with math, simulations, and figures.*  
+  *A complete narrative with math, simulations, and figures.* 
 
 - 🔍 [Deep Dive: Period-Doubling and Chaos]({{ site.baseurl }}/2025/09/29/deep-dive-period-doubling.html)  
   *A detailed walkthrough with images, simulations, and extended analysis.*
