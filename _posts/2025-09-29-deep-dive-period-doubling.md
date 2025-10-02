@@ -219,7 +219,8 @@ This contrast sets the stage for later sections: once **forcing** is added (Sect
 ## 4. Forced Oscillators & Chaos (Ueda’s Equation)
 
 So far we have compared linear and nonlinear oscillators under simple conditions.  
-When we add **external forcing**, however, a new level of complexity emerges.  
+When we add **external forcing**, however, a new level of complexity emerges.
+
 One famous example is **Ueda’s equation**, a nonlinear forced oscillator that shows how periodic driving can create chaotic motion.
 
 ---
@@ -232,6 +233,7 @@ $$
 \ddot{x} = -\delta \dot{x} - \beta x^{3} + F\cos(\omega t)
 $$
 
+Where:
 - \(\delta\) — damping coefficient (dissipation).  
 - \(\beta\) — nonlinear stiffness coefficient (cubic restoring term).  
 - \(F\) — forcing amplitude.  
@@ -244,7 +246,9 @@ $$
   - lock to a submultiple (subharmonic, e.g. period-2),
   - or become chaotic.
 
-#### Detecting behaviour numerically
+---
+
+#### How to detect behaviour numerically
 1. **Time series + FFT spectrum** — subharmonics appear at \(\omega/2, \omega/4,\dots\).  
 2. **Poincaré map** — sample \(x(t)\) every period \(T = 2\pi/\omega\).  
    - Period-1 → one point.  
@@ -307,7 +311,7 @@ The results show the transition from periodic motion to subharmonics and eventua
 
 | <img src="{{ site.baseurl }}/images/ueda3a.png" width="80%"> | <img src="{{ site.baseurl }}/images/ueda3b.png" width="80%"> |
 |-------------------------|-------------------------|
-| *Ueda – chaotic time series* | *Ueda – chaotic phase plane* |
+| *High forcing — time series: irregular oscillations.* | *High forcing — phase plane: chaotic attractor.* |
 
 > **Summary:**  
 > - Low forcing → clean periodic motion.  
@@ -320,7 +324,13 @@ The results show the transition from periodic motion to subharmonics and eventua
 
 Ueda’s equation shows how **external driving** interacts with **nonlinearity** to produce chaos.  
 This transition mirrors the behaviour we later observe in real systems like the **SkyMaster ride**, where forcing from motors translates into irregular — and potentially unsafe — motion.  
-In both cases, forcing is the **gateway to chaos**.
+
+Ueda’s model demonstrates how **forcing and nonlinearity combine** to generate chaos:  
+- Small forcing → stable periodic motion.  
+- Moderate forcing → subharmonic oscillations.  
+- Strong forcing → chaos.  
+
+**Takeaway:** Forcing is the **gateway to chaos**.
 
 ---
 
@@ -332,10 +342,9 @@ Eventually, this sequence leads to fully chaotic motion.
 
 ---
 
-### Period-1 Oscillations (γ = 1.060)
+### 5.1 Period-1 Oscillations (γ = 1.060)
 
-At low driving strength, the system exhibits **simple periodic motion**.  
-The oscillator repeats the same path every cycle.
+At low driving strength, the system exhibits **simple periodic motion**: the oscillator repeats the same path every cycle.
 
 | ![Period 1 Time Series]({{ site.baseurl }}/images/period1a.png) | ![Period 1 Phase Plane]({{ site.baseurl }}/images/period1b.png) |
 |---------------------------|---------------------------|
@@ -352,9 +361,9 @@ The oscillator repeats the same path every cycle.
 
 ---
 
-### Period-2 Oscillations (γ = 1.078)
+### 5.2 Period-2 Oscillations (γ = 1.078)
 
-With greater driving, the system undergoes its first **bifurcation**: oscillations alternate between two states.
+Increasing the drive produces the first **bifurcation**: oscillations alternate between two states.
 
 | ![]({{ site.baseurl }}/images/period2a.png) | ![]({{ site.baseurl }}/images/period2b.png) |
 |---------------------------|---------------------------|
@@ -371,7 +380,7 @@ With greater driving, the system undergoes its first **bifurcation**: oscillatio
 
 ---
 
-### Period-4 Oscillations (γ = 1.081)
+### 5.3 Period-4 Oscillations (γ = 1.081)
 
 Further increase in driving strength leads to another bifurcation: **Period-4 motion**.
 
@@ -391,8 +400,7 @@ Further increase in driving strength leads to another bifurcation: **Period-4 mo
 
 ### Period-8 Oscillations (γ = 1.0826)
 
-At even stronger driving, the system displays **Period-8 behaviour**.  
-This is the last stage before chaos.
+At even stronger drive, the system exhibits **Period-8 behaviour**, the last stage before chaos.
 
 | ![]({{ site.baseurl }}/images/period8a.png) | ![]({{ site.baseurl }}/images/period8b.png) |
 |---------------------------|---------------------------|
@@ -409,9 +417,18 @@ This is the last stage before chaos.
 
 ---
 
-### The Cascade and Feigenbaum’s Constant
+### 5.5 The Cascade and Feigenbaum’s Constant
 
 This doubling process (Period-1 → Period-2 → Period-4 → Period-8 → …) accelerates rapidly.  
+The intervals between bifurcations shrink geometrically, converging toward the **Feigenbaum constant**:
+
+
+The doubling process accelerates rapidly:
+
+$$
+\text{Period-1} \;\;\to\;\; \text{Period-2} \;\;\to\;\; \text{Period-4} \;\;\to\;\; \text{Period-8} \;\;\to\;\; \dots
+$$
+
 The intervals between bifurcations shrink geometrically, converging toward the **Feigenbaum constant**:
 
 $$
@@ -426,6 +443,10 @@ As the sequence accumulates, the ratio of bifurcation intervals converges to δ 
 
 ---
 
+**Takeaway:** The period-doubling cascade is a universal signature of chaos. Each bifurcation doubles complexity, with timings set by Feigenbaum’s constant.
+
+---
+
 ## 6. Extended Findings: The SkyMaster Ride
 
 To connect theory with the real world, we studied the **SkyMaster ride**, a fairground pendulum swing.  
@@ -434,35 +455,36 @@ Here, the consequences are not only theoretical but also practical — oscillati
 
 ---
 
-### Low-Amplitude Motion
+### 6.1 Low-Amplitude Motion
 
 At small driving forces, the SkyMaster behaves like a nearly linear pendulum.  
 Oscillations are smooth, regular, and close to sinusoidal.
 
 | ![]({{ site.baseurl }}/images/skymaster1a.png) | ![]({{ site.baseurl }}/images/skymaster1b.png) |
 |------------------------------|------------------------------|
-| *SkyMaster – low amplitude*  | *SkyMaster – higher amplitude* |
+| *SkyMaster — low amplitude: smooth sinusoidal motion.* | *SkyMaster — higher amplitude: beginning of nonlinearity.* |
 
 - **Low amplitude**: Periodic motion with a clear repeating cycle.  
-- **Higher amplitude**: Oscillations deviate from sinusoidal form, marking the onset of nonlinearity.  
+- - **Higher amplitude:** Oscillations deviate from pure sinusoidal form, marking the onset of nonlinear behaviour.  
 
 > **Summary**: At low drive, the SkyMaster is stable and predictable, with forces well within safe limits.
 
 ---
 
-### Growing Nonlinearity
+### 6.2 Growing Nonlinearity
 
 As the driving energy increases, nonlinear effects dominate the system.  
-The oscillations grow in amplitude and complexity, and the forces acting on riders become less predictable.
+Oscillations grow in amplitude and complexity, while forces on riders become less predictable.
 
-![]({{ site.baseurl }}/images/skymaster1c.png) |
-|------------------------------|
-| *SkyMaster – g-force profile* |
+![]({{ site.baseurl }}/images/skymaster1c.png)  
+*SkyMaster — g-force profile showing rapid fluctuations.*
 
-- **G-force profile**: Riders experience rapidly varying forces, reflecting the system’s nonlinear response.  
-  These fluctuations affect not only comfort but also **safety considerations in ride design and operation**.  
+- **G-force profile**: Riders experience rapidly varying forces, reflecting the system’s nonlinear response.
+- These fluctuations affect not only comfort but also **safety in ride design and operation**.  
 
-#### Example — estimated g-force at higher drive (safety check)
+
+#### Example: Estimated g-force at higher drive
+
 
 Using simulation parameters, we can estimate the peak g-force for a high drive amplitude:
 
@@ -470,7 +492,7 @@ Using simulation parameters, we can estimate the peak g-force for a high drive a
 G = (ω² * r) / g
 ```
 
-For A = 4.0:
+For amplitude \(A = 4.0\):
 
 1. \(14.34 \times 14.34 = 205.6356\)  
 2. \(205.6356 \times 1.84 = 378.369504\)  
@@ -482,43 +504,55 @@ For A = 4.0:
 > **Safety note:** This is *far beyond* normal human tolerance (amusement rides typically remain well under 5 G).  
 > Once nonlinear oscillations grow, the ride risks producing unsafe forces.
 
-> **Summary**: The system now exhibits strong nonlinear features, and safety margins must account for unexpected force variations.
+> **Summary:** Strong nonlinearity drives forces outside safe margins, making design safeguards essential.
 
 ---
 
-### Rolling Chaotic Motion
+### 6.3 Rolling Chaotic Motion
 
 Beyond a critical threshold, the SkyMaster’s motion becomes irregular and unpredictable.  
 Instead of smooth oscillations, the ride enters a state of **rolling chaotic motion**.
 
 | ![]({{ site.baseurl }}/images/skymaster1d.png) | ![]({{ site.baseurl }}/images/skymaster1e.png) |
 |------------------------------|------------------------------|
-| *Onset of chaos*             | *Rolling chaotic motion*     |
+| *Onset of chaos: motion becomes irregular.* | *Rolling chaotic motion: large, unpredictable swings.* |
 
-- **Onset of chaos**: Motion becomes aperiodic and highly sensitive to initial conditions.  
+- **Onset of chaos:** Motion turns aperiodic, sensitive to small differences in starting conditions.  
 - **Rolling chaotic motion**: Large, irregular swings dominate, making long-term prediction impossible.  
 
-> **Summary**: At high drive, the SkyMaster exhibits rolling chaotic motion.  
-> This unpredictability makes control difficult and increases risks to rider safety.
+> **Summary**: **Summary:** At high drive, the SkyMaster becomes chaotic. Control is difficult and rider safety risks increase.
 
 ---
 
-### From Theory to Experience
+### 6.4 From Theory to Experience
 
 The SkyMaster demonstrates how **nonlinear oscillators and chaos theory** are not confined to equations and simulations.  
 They manifest directly in mechanical systems — and in this case, in the **safety of real-world amusement rides**.  
-Chaos here is not just abstract: it is something riders feel in their bodies.
+Chaos here is not just abstract mathematics: it is something riders feel in their bodies.
 
 
 ---
 
 ## 7. Chaos and Beyond
 
-We also observed phenomena like the **jump phenomenon**, where nonlinear resonance leads to sudden amplitude jumps.  
+Beyond period doubling, nonlinear systems reveal even more complex behaviour.  
+One striking feature is the **jump phenomenon**, where nonlinear resonance causes sudden amplitude shifts as system parameters change.  
 
-Bifurcation diagrams (below) map regions of stability, doubling, and chaos.  
+To visualise the broader landscape, we use **bifurcation diagrams**, which map regions of stability, doubling, and chaos in a single view.
 
-![Bifurcation Diagram]({{ site.baseurl }}/images/bifurcation.png)
+![Bifurcation Diagram]({{ site.baseurl }}/images/bifurcation.png)  
+*Figure: Bifurcation diagram showing transitions from stable motion → doubling → chaos.*
+
+**Key insights from the diagram:**
+- **Stable regions**: predictable, repeating motion.  
+- **Period-doubling cascades**: each bifurcation doubles complexity.  
+- **Chaotic windows**: irregular, sensitive to initial conditions.  
+- **Intermittency**: stable “islands” of order reappear within chaotic regimes.  
+
+---
+
+**Summary:**  
+Period doubling is only one path into chaos. Nonlinear systems can jump, wander, and mix stability with unpredictability, creating a rich and intricate dynamical landscape.
 
 ---
 
@@ -541,9 +575,20 @@ Ultimately, studying period doubling gives us two perspectives:
 - A **practical lens**, where oscillations and g-forces remind us that real systems — and real people — live with the consequences of nonlinear motion.
 
 
-- We began with simple oscillators → added nonlinear springs → forced systems → period doubling → chaos.  
+### Key Takeaways
+
+- We began with **simple oscillators**, verified with analytical comparisons.  
+- Introduced **nonlinear springs** and saw amplitude-dependent dynamics.  
+- Added **forcing**, which opened the door to bifurcations and chaos.
 - Verification steps ensured our models matched reality.  
-- Applications like the Skymaster ride show that chaos isn’t just theoretical: it has real engineering and safety implications.  
+- Applications like the Skymaster ride show that chaos is not just theoretical: it has real engineering and safety implications.
+- Observed the **period-doubling cascade**, culminating in chaotic behaviour.  
+- Applied the theory to the **SkyMaster ride**, where chaos becomes a matter of safety, not just theory.
+
+
+
+**Final message:**  
+
 
 For a lighter introduction, check the [overview site](https://oospakooysa.github.io/period_doubling/). For those who want the deep dive—you just read it.
 
