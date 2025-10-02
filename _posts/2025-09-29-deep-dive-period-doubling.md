@@ -15,7 +15,13 @@ This post expands on the material in my [period doubling site](https://oospakooy
 
 Period-doubling bifurcations provide one of the cleanest routes to chaos. Starting with simple oscillators, we’ll explore how gradually adding nonlinearity, forcing, and amplitude changes drive systems from predictable motion into chaotic behaviour.  
 
-We’ll use real-world analogies (fairground rides, suspension systems), coding in Octave, and figures from simulations to make this journey concrete.
+To keep things grounded, we will use:  
+- **real-world analogies** (fairground rides, suspension systems),  
+- **Octave code and simulations**, and  
+- **plots and diagrams** that make the transition into chaos visible.
+
+The goal is to show how a path that begins with simple, predictable motion eventually unfolds into the rich — and sometimes dangerous — dynamics of chaos.
+
 
 ---
 
@@ -23,7 +29,7 @@ We’ll use real-world analogies (fairground rides, suspension systems), coding 
 
 Before diving into chaos, we first **verify** our tools.
 
-### The Apocalypse Ride
+### 2.1 The Apocalypse Ride
 A 1D dynamic system, where a car free-falls from 54 m before braking at ~6 m.
 We modelled the ride in Octave, observing the velocity and displacement over time.
 
@@ -33,24 +39,33 @@ We modelled the ride in Octave, observing the velocity and displacement over tim
 h₁ = (mg / B) * h₂
 ```
 
+$$
+h₁ = \frac{mg}{B} \cdot h₂
+$$
+
 Graphs of velocity and acceleration confirm when braking occurs (~10.2s) and how deceleration peaks.
 
-![Apocalypse Ride Velocity]({{ site.baseurl }}/images/apocalypse_velocity.png)
-![Apocalypse Ride Acceleration]({{ site.baseurl }}/images/apocalypse_accel.png)
+| ![Apocalypse Ride Velocity]({{ site.baseurl }}/images/apocalypse_velocity.png) | ![Apocalypse Ride Acceleration]({{ site.baseurl }}/images/apocalypse_accel.png) |
+|---|---|
+| *Velocity vs. time — steady fall, then braking.* | *Acceleration vs. time — deceleration peak.* |
 
 ---
 
-### Monster Truck Suspension
+### 2.2 Monster Truck Suspension
 Here we verified solvers. Euler vs Euler-Cromer gave clear differences: Euler diverges, while Euler-Cromer preserves stable oscillations.
 
-![Suspension Euler]({{ site.baseurl }}/images/suspension_euler.png)  
-![Suspension Cromer]({{ site.baseurl }}/images/suspension_cromer.png)
+- **Euler method** → diverges, energy not conserved.  
+- **Euler–Cromer** → stable oscillations, energy preserved. 
+
+| ![Suspension Euler]({{ site.baseurl }}/images/suspension_euler.png) | ![Suspension Cromer]({{ site.baseurl }}/images/suspension_cromer.png) |
+|---|---|
+| *Euler method diverging — unstable motion.* | *Euler–Cromer method conserving energy.* |
 
 Validation against experimental data showed errors < 10%, confirming the model.
 
 ---
 
-### Exact Verification (Activity 3)
+### 2.3 Exact Verification (Analytical vs Numerical)
 Finally, we compared numerical solutions directly against the analytical small-angle pendulum.  
 For fine step sizes (Δt = 0.01), the agreement is excellent.  
 But for coarser timesteps, numerical error grows dramatically — reaching about **54% error**.
@@ -58,6 +73,9 @@ But for coarser timesteps, numerical error grows dramatically — reaching about
 | <img src="{{ site.baseurl }}/images/verification_exact.png" alt="Verification by exact measurement (error percentage)" width="80%"> |
 |-----------------------------------------------------------------------------------------------------------------------------------|
 | *Verification by Exact Measurement – Numerical solution shows ~54% error at large Δt compared to the analytical solution.* |
+
+**Takeaway:** With careful solver choice and step size, our tools reproduce real physics accurately.  
+This gives us confidence to apply them to nonlinear and chaotic systems in later sections.
 
 ---
 
@@ -113,6 +131,11 @@ Linearity guarantees *predictability and simplicity*. Nonlinearity breaks this, 
 
 #### Linear Oscillator (Test A)
 
+Simulation shows the textbook case:  
+- **Time series:** pure sinusoidal motion.  
+- **Phase plane:** a perfect closed ellipse.  
+- **Spectrum:** one sharp peak at 0.158 Hz (period 6.28
+
 | <img src="{{ site.baseurl }}/images/linear1.png" alt="Linear oscillator time series" width="80%"> |
 |--------------------------------------------------------------------------------------------------|
 | **Time series:** Clean sinusoidal motion with constant amplitude |
@@ -121,10 +144,7 @@ Linearity guarantees *predictability and simplicity*. Nonlinearity breaks this, 
 |--------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
 | **Phase plane:** Perfect closed ellipse — hallmark of linear harmonic motion | **Spectrum:** Single sharp frequency peak at 0.158 Hz (period = 6.28 s) — no distortion or harmonics |
 
-
-- Time series: pure sinusoid.  
-- Spectrum: one clear peak at the fundamental frequency.  
-- Simulation result:  
+- Results:  
   - **Period = 6.28 s**  
   - **Frequency = 0.158 Hz**  
 
@@ -134,6 +154,8 @@ Linearity guarantees *predictability and simplicity*. Nonlinearity breaks this, 
 
 #### Nonlinear Oscillator — Soft Spring (β < 0)
 
+Here the restoring force weakens with displacement.  
+
 | <img src="{{ site.baseurl }}/images/softspring01.png" alt="Soft spring time series" width="80%"> |
 |--------------------------------------------------------------------------------------------------|
 | *Time series – soft spring (longer oscillation period than linear)* |
@@ -142,15 +164,20 @@ Linearity guarantees *predictability and simplicity*. Nonlinearity breaks this, 
 |--------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
 | *Phase plane – elliptical orbit distorted by softening nonlinearity* | *Spectrum – harmonics and subharmonics present* |
 
+Results:  
+- **Time series:** longer oscillation period than the linear case.  
+- **Phase plane:** ellipse visibly distorted.  
+- Spectrum: **two harmonics** appear, indicating distortion from sinusoidal motion.
 - Velocity range: **~0 to 1.4** (slightly reduced compared to linear ~0 to 1.5).  
 - Lower velocity → **longer period** than the linear case.  
-- Spectrum: **two harmonics** appear, indicating distortion from sinusoidal motion.  
 
 > **Summary**: The soft spring stretches the oscillation period and introduces harmonics.
 
 ---
 
 #### Nonlinear Oscillator — Hard Spring (β > 0)
+
+Here the restoring force stiffens with displacement.
 
 | <img src="{{ site.baseurl }}/images/hardspring01.png" alt="Hard spring time series" width="80%"> |
 |-------------------------------------------------------------------------------------------------|
@@ -160,9 +187,12 @@ Linearity guarantees *predictability and simplicity*. Nonlinearity breaks this, 
 |-------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
 | *Phase plane – diamond-like orbit, showing stiffening effect* | *Spectrum – strong higher harmonics due to hardening* |
 
+Results:  
+- **Time series:** shorter period than the linear case.  
+- **Phase plane:** orbit sharpens into a diamond-like shape.  
+- **Spectrum:** higher harmonics appear strongly.
+-  **shorter period**.
 - Velocity and frequency are both **greater** than in the linear case.  
-- Result: **shorter period**.  
-- Spectrum: **two harmonics** visible, reflecting nonlinear distortion.  
 
 > **Summary**: The hard spring compresses the oscillation period and introduces harmonics.
 
