@@ -133,7 +133,7 @@ Linearity guarantees *predictability and simplicity*. Nonlinearity breaks this, 
 
 ### 3.2 Applying the Model (Your Simulations)
 
-#### Linear Oscillator (Test A)
+### Test A: Linear Oscillator (γ = baseline)
 
 Simulation shows the textbook case:  
 - **Time series:** pure sinusoidal motion.  
@@ -156,7 +156,7 @@ Simulation shows the textbook case:
 
 ---
 
-#### Nonlinear Oscillator — Soft Spring (β < 0)
+#### Test B: Nonlinear Oscillator — Soft Spring (β < 0)
 
 Here the restoring force weakens with displacement.  
 
@@ -179,7 +179,7 @@ Results:
 
 ---
 
-#### Nonlinear Oscillator — Hard Spring (β > 0)
+#### Test C: Nonlinear Oscillator — Hard Spring (β > 0)
 
 Here the restoring force stiffens with displacement.
 
