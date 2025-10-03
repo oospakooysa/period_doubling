@@ -70,7 +70,11 @@ Finally, we compared numerical solutions directly against the analytical small-a
 For fine step sizes (Δt = 0.01), the agreement is excellent.  
 But for coarser timesteps, numerical error grows dramatically — reaching about **54% error**.
 
-| <img src="{{ site.baseurl }}/images/verification_exact.png" alt="Verification by exact measurement (error percentage)" width="80%"> |
+| <img src="{{ site.baseurl }}/images/verification_exact01.png" alt="Verification by exact measurement (error percentage)" width="80%"> |
+|-----------------------------------------------------------------------------------------------------------------------------------|
+| *Verification by Exact Measurement – Numerical solution shows ~54% error at large Δt compared to the analytical solution.* |
+
+| <img src="{{ site.baseurl }}/images/verification_exact02.png" alt="Verification by exact measurement (error percentage)" width="80%"> |
 |-----------------------------------------------------------------------------------------------------------------------------------|
 | *Verification by Exact Measurement – Numerical solution shows ~54% error at large Δt compared to the analytical solution.* |
 
